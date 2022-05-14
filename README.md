@@ -3,7 +3,7 @@
 Martech es un sitio Web especializado en la venta de celulares de segunda mano. La industria tecnológica ha crecido significativamente en estos últimos años, dando la apertura a nuevas oportunidades y avances para la comunidad: uno de las más importantes invenciones ha sido el celular. En Martech, somos conscientes de que la frecuente actualización de modelos de celulares y su indispensable uso cotidiano, implican una constante busqueda, por parte de los usuarios, de precios "razonables" y tecnologias de última generación.
 
 
-## Surfea la "ola tecnológica" (Nuestra audiencia objetivo) 
+## Surfeando la "ola tecnológica" (Nuestra audiencia objetivo) 
 ![Imgur](https://i.imgur.com/I7SfAoj.jpg[/img])
 
 En muchos casos, los usuarios de celulares se encuentran imposibilitados de adquirir los últimos dispositivos del mercado, dado que los costos de los mismos son muy elevados. Por esta razón, en Martech, les ofrecemos la posibilidad de mantenerse en la "cresta de la ola" tecnológica con la adquisición de un mejor producto del que poseen y a un precio accesible.
