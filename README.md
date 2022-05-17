@@ -40,16 +40,16 @@ características:" Especialista en reparación de celulares de última generaci�
 ];
 ```
 
- ## Kevin Lechmann
+# Kevin Lechmann
 ![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img])
 
-## Pablo Navarro Zepeda
+# Pablo Navarro Zepeda
 ![imgur](https://i.imgur.com/GUWampO.jpg[/img]) 
 
-## Jorge Nassar
+# Jorge Nassar
 ![imgur](https://i.imgur.com/LXPfzYn.jpg[/img]) 
 
-## Analia Gonzalez
+# Analia Gonzalez
 ![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) 
 
 
