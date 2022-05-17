@@ -40,17 +40,17 @@ características:" Especialista en reparación de celulares de última generaci�
 ];
 ```
 
-Kevin Lechmann
-![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img])
 
-Pablo Navarro Zepeda
-![imgur](https://i.imgur.com/GUWampO.jpg[/img]) 
+![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img]) Kevin Lechmann
 
-Jorge Nassar
-![imgur](https://i.imgur.com/LXPfzYn.jpg[/img]) 
 
-Analia Gonzalez
-![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) 
+![imgur](https://i.imgur.com/GUWampO.jpg[/img]) Pablo Navarro Zepeda
+
+
+![imgur](https://i.imgur.com/LXPfzYn.jpg[/img]) Jorge Nassar
+
+
+![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) Analia Gonzalez
 
 
 ## Cracterísticas generales
