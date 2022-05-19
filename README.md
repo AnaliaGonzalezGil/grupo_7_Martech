@@ -1,13 +1,13 @@
 # MARTECH
 ## ¿Qué producto ofrecemos? :iphone:
-Martech es un sitio Web especializado en la venta de celulares de segunda mano. La industria tecnológica ha crecido significativamente en estos últimos años, dando la apertura a nuevas oportunidades y avances para la comunidad: uno de las más importantes invenciones ha sido el celular. En Martech, somos conscientes de que la frecuente actualización de modelos de celulares y su indispensable uso cotidiano, implican una constante busqueda, por parte de los usuarios, de precios "razonables" y tecnologias de última generación.
+Martech es un sitio Web especializado en la venta de celulares de segunda mano. La industria tecnológica ha crecido significativamente en estos últimos años, dando la apertura a nuevas oportunidades y avances para la comunidad: uno de las más importantes invenciones ha sido el celular. En Martech, somos conscientes de que la frecuente actualización de modelos de celulares y su indispensable uso cotidiano, implican una constante búsqueda, por parte de los usuarios, de precios "razonables" y tecnologías de última generación.
 
 
 ## Surfeando la "ola tecnológica" (Nuestra audiencia objetivo) 
 ![Imgur](https://i.imgur.com/I7SfAoj.jpg[/img])
 
-En muchos casos, los usuarios de celulares se encuentran imposibilitados de adquirir los últimos dispositivos del mercado, dado que los costos de los mismos son muy elevados. Por esta razón, en Martech, les ofrecemos la posibilidad de mantenerse en la "cresta de la ola" tecnológica con la adquisición de un mejor producto del que poseen y a un precio accesible.
-Apuntamos a un rango de edad de aproximadamente entre 20 a 70 años y el proyecto estará dirigido a Latinoamerica.
+En muchos casos, los usuarios de celulares se encuentran imposibilitados de adquirir los últimos dispositivos del mercado, dado que los costos de los mismos son muy elevados. Por esta razón, en Martech, les ofrecemos la posibilidad de mantenerse en la "cresta de la ola" tecnológica con la adquisición de un mejor producto del que poseen, a un precio accesible.
+Apuntamos a un rango de edad de aproximadamente entre 20 a 70 años y el proyecto estará dirigido a Latinoamérica.
 
 
 ## Valor agregado :raised_hands::calling:
@@ -41,10 +41,7 @@ características:" Especialista en reparación de celulares de última generaci�
 ```
 
 
-![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img]) Kevin Lechmann
-
-
-![imgur](https://i.imgur.com/GUWampO.jpg[/img]) Pablo Navarro Zepeda
+![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img]) Kevin Lechmann ![imgur](https://i.imgur.com/GUWampO.jpg[/img]) Pablo Navarro Zepeda
 
 
 ![imgur](https://i.imgur.com/LXPfzYn.jpg[/img]) Jorge Nassar
@@ -53,7 +50,7 @@ características:" Especialista en reparación de celulares de última generaci�
 ![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) Analia Gonzalez
 
 
-## Cracterísticas generales
+## Características generales
 Los celulares publicados en nuestra Web estarán clasificados por marca y recibirán una subclasificación, la cual hace referencia al estado del equipo: Excelente, Muy Bueno, Bueno. Ofrecemos distintos tipos de pagos(credito, débito, MercadoPago), en cuotas sin interes y 3 meses de garantía.
 
 ## Sitios de referencia
