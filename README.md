@@ -41,8 +41,8 @@ características:" Especialista en reparación de celulares de última generaci�
 ```
 
 
-![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img]) ![imgur](https://i.imgur.com/GUWampO.jpg[/img])![imgur](https://i.imgur.com/LXPfzYn.jpg[/img])![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) Analia Gonzalez
-
+![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img]) ![imgur](https://i.imgur.com/GUWampO.jpg[/img])![imgur](https://i.imgur.com/LXPfzYn.jpg[/img])![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) 
+## Kevin Leichmann 
 
 ## Características generales
 Los celulares publicados en nuestra Web estarán clasificados por marca y recibirán una subclasificación, la cual hace referencia al estado del equipo: Excelente, Muy Bueno, Bueno. Ofrecemos distintos tipos de pagos(credito, débito, MercadoPago), en cuotas sin interes y 3 meses de garantía.
