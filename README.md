@@ -41,7 +41,7 @@ características:" Especialista en reparación de celulares de última generaci�
 ```
 
 
-![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img])           ![imgur](https://i.imgur.com/GUWampO.jpg[/img])         ![imgur](https://i.imgur.com/LXPfzYn.jpg[/img])                 ![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) 
+![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img])                             ![imgur](https://i.imgur.com/GUWampO.jpg[/img])                                                                               ![imgur](https://i.imgur.com/LXPfzYn.jpg[/img])                 ![imgur](https://i.imgur.com/hVJyBXT.jpg[/img]) 
 ## Kevin Leichmann 
 
 ## Características generales
