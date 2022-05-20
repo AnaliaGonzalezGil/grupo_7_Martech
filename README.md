@@ -52,6 +52,9 @@ Los celulares publicados en nuestra Web estarán clasificados por marca y recibi
 ## Logo
 https://looka.com/s/89145324
 
+## Paleta de colores
+ #1D1D1D  #BEA15D  #735C36
+
 ## Sitios de referencia
 
 * https://www.amazon.com: Sitio elegido por las funcionalidades que presenta.
