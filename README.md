@@ -49,6 +49,9 @@ características:" Especialista en reparación de celulares de última generaci�
 ## Características generales
 Los celulares publicados en nuestra Web estarán clasificados por marca y recibirán una subclasificación, la cual hace referencia al estado del equipo: *Excelente*, *Muy Bueno*,*Bueno*. Cabe destacar, que desarrollaremos nuestro proyecto en mobile first, para luego poder ser adaptado a otras resoluciones. Ofrecemos distintos tipos de pagos(credito, débito, MercadoPago), en cuotas sin interes y 3 meses de garantía.
 
+## Logo
+https://looka.com/s/89145324
+
 ## Sitios de referencia
 
 * https://www.amazon.com: Sitio elegido por las funcionalidades que presenta.
