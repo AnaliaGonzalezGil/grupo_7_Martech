@@ -15,7 +15,7 @@ Apuntamos a un rango de edad de aproximadamente entre 20 a 70 años y el proyect
 
 ## Valor agregado :raised_hands::calling:
 
-En Martech tenemos en cuenta las necesidades de nuestros clientes y, por eso, les brindamos la posibilidad de poder vender sus equipos en nuestra Web. Previamente, nuestro equipo de técnicos realizará chequeos e inspecciones a los celulares para constatar que se encuentren en óptimas condiciones para la venta. Garantizando de esta manera, la buena calidad de los productos ofrecidos en nuestra Web.
+En Martech tenemos en cuenta las necesidades de nuestros clientes y, por eso, les brindamos la posibilidad de poder vender sus equipos en nuestra Web. Previamente, nuestro equipo de técnicos realizará chequeos e inspecciones a los celulares para constatar que se encuentren en óptimas condiciones para la venta. Garantizando de esta manera, la buena calidad de los productos ofrecidos en nuestra Web.Ofrecemos distintos tipos de pagos(credito, débito, MercadoPago), en cuotas sin interes y 3 meses de garantía.
 
 
 ## Nuestro equipo ![imgur](https://i.imgur.com/mRZqh0U.jpg[/img])
@@ -41,20 +41,19 @@ nombre: "Analia Gonzalez",
 características:" Especialista en reparación de celulares de última generación. Encargada del front end",
 }
 ];
- #1D1D1D  #BEA15D  #735C36
 ```
 
 
 ![imgur](https://i.imgur.com/p2JC0Yv.jpg[/img])**Kevin** ![imgur](https://i.imgur.com/GUWampO.jpg[/img])**Pablo** ![imgur](https://i.imgur.com/LXPfzYn.jpg[/img])**Jorge** ![imgur](https://i.imgur.com/hVJyBXT.jpg[/img])**Analia** 
 
 ## Características generales
-Los celulares publicados en nuestra Web estarán clasificados por marca y recibirán una subclasificación, la cual hace referencia al estado del equipo: *Excelente*, *Muy Bueno*,*Bueno*. Cabe destacar, que desarrollaremos nuestro proyecto en mobile first, para luego poder ser adaptado a otras resoluciones. Ofrecemos distintos tipos de pagos(credito, débito, MercadoPago), en cuotas sin interes y 3 meses de garantía.
+Los celulares publicados en nuestra Web estarán clasificados por marca y recibirán una subclasificación, la cual hace referencia al estado del equipo: *Excelente*, *Muy Bueno*,*Bueno*. Cabe destacar, que desarrollaremos nuestro proyecto en mobile first, para luego poder ser adaptado a otras resoluciones. 
 
 ## Logo
 https://looka.com/s/89145324
 
 ## Paleta de colores
- #1D1D1D  #BEA15D  #735C36
+![imgur](https://i.imgur.com/hU5C9Ib.png[/img])
 
 ## Sitios de referencia
 
