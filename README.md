@@ -41,6 +41,7 @@ nombre: "Analia Gonzalez",
 características:" Especialista en reparación de celulares de última generación. Encargada del front end",
 }
 ];
+ #1D1D1D  #BEA15D  #735C36
 ```
 
 
