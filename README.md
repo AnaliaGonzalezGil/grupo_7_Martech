@@ -24,22 +24,20 @@ En Martech tenemos en cuenta las necesidades de nuestros clientes y, por eso, le
 let teamMembers =[
 {
 nombre: "Kevin Lechmann",
-características: "Techno fan. Diplomado en Reparación y Mantenimiento de celulares. Encargado del front end",
+características: "Techno fan. Diplomado en Reparación y Mantenimiento de celulares. Encargado del front end"
 },
-
 {
 nombre: "Pablo Navarro Zepeda",
-características: "Apple Lover. Técnico en Reparación de celulares. Encargado del back end",
-
+características: "Apple Lover. Técnico en Reparación de celulares. Encargado del back end"
+},
 {
 nombre: "Jorge Nassar",
-características: "Disfruta sin limites todas las herramientas que le brinda su cel. Encargado del back end",
+características: "Disfruta sin limites todas las herramientas que le brinda su cel. Encargado del back end"
 },
-
 {
 nombre: "Analia Gonzalez",
-características:" Especialista en reparación de celulares de última generación. Encargada del front end",
-}
+características:" Especialista en reparación de celulares de última generación. Encargada del front end"
+};
 ];
 ```
 
