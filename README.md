@@ -62,3 +62,5 @@ https://looka.com/s/89145324
 * https://zelucash.com: Sitio elegido por los productos que ofrece y las funcionalidades que presenta.
 
 
+## Trello
+https://trello.com/b/76aHo92A/grupo-7-de-dh
