@@ -61,4 +61,8 @@ https://looka.com/s/89145324
 * https://tienda.movistar.com.ar/celulares-usados: Sitio elegido por los productos que ofrece y los clientes a los que apunta.
 * https://zelucash.com: Sitio elegido por los productos que ofrece y las funcionalidades que presenta.
 
+## Trello
 
+https://trello.com/grupo7325 
+
+Separados por Sprints!
