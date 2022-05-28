@@ -1,0 +1,31 @@
+
+Header
+<i class="fa-light fa-messages"></i> -> Mensajes Light sin relleno  / <i class="fa-solid fa-messages"></i> -> Mensajes Solid con relleno
+<i class="fa-light fa-star-sharp"></i> -> Estrella Light Sin Relleno / <i class="fa-solid fa-star-sharp"></i> -> Estrella Solid con relleno.
+<i class="fa-light fa-magnifying-glass"></i> Lupa Light sin Relleno./ <i class="fa-solid fa-magnifying-glass"></i> -> Lupa Solid con Relleno.
+
+<i class="fa-light fa-messages"></i>
+
+tel
+<i class="fa-regular fa-phone"></i>
+<i class="fa-solid fa-phone"></i>
+
+User
+<i class="fa-solid fa-user"></i>
+<i class="fa-regular fa-user"></i>
+
+Carrito
+<i class="fa-regular fa-cart-shopping"></i>
+<i class="fa-regular fa-cart-shopping"></i>
+
+Carrito +
+<i class="fa-solid fa-cart-plus"></i>
+<i class="fa-regular fa-cart-plus"></i>
+
+
+Para Footer;
+<i class="fa-brands fa-facebook"></i> F "vacía" redondeado con un criculo / <i class="fa-brands fa-facebook-f"></i> Solo la F
+<i class="fa-brands fa-instagram"></i> Insta Logo "light" / 
+<i class="fa-light fa-envelope-open-text"></i>  Newsletter Light / <i class="fa-solid fa-envelope-open-text"></i></i> Newsletter Solid
+
+<i class="fa-light fa-dollar-sign"></i> Dolar Light / Dolar <i class="fa-solid fa-dollar-sign"></i> Dolar Solid

@@ -65,4 +65,7 @@ https://looka.com/s/89145324
 
 https://trello.com/grupo7325 
 
-Separados por Sprints!
+Separados por Sprints
+https://trello.com/b/76aHo92A/1r-sprint 
+https://trello.com/b/L2syRgWF/2do-sprint
+
