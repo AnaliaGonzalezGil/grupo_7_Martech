@@ -6,3 +6,33 @@ body{
 .iconos-header{
     color: #bea86c;
 }
+
+
+/* Para resoluciones de móvil: */
+@media (min-width:360px){
+.productos{
+    position:relative;
+    padding-bottom: 5%;
+}
+.img-item{
+    width:40%;
+}
+.item-carrito{
+    display:flex;
+    margin:auto;
+
+}
+.boton-retirar{
+    margin: 0;
+    position: absolute;
+    left:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.cuenta{
+    border-top: 3px solid #bea86c;
+    padding-top: 2%;
+    border-bottom: 3px solid #bea86c;
+    padding-bottom:2%;
+}
+}
