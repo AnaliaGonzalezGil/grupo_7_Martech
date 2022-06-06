@@ -1,0 +1,98 @@
+* {
+  margin: 2px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1e1d1d;
+  box-sizing: content-box;
+  color: #bea86c;
+  width: 95vw;
+  padding-left: 20px;
+}
+p {
+  font-size: 12px;
+}
+h4 {
+  font-size: 12px;
+}
+header {
+  width: 95vw;
+}
+
+/* Empieza reglas de estilo de login y register */
+.caja-page-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo {
+  margin: 20px 20px 20px 20px;
+}
+
+.page-forms {
+  width: 30%;
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle-page {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.div-forms {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.div-forms-principal {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.label-forms {
+  margin-bottom: 3px;
+}
+
+.input-forms {
+  margin-bottom: 3px;
+  padding: 3px;
+}
+
+.button-forms-login {
+  margin-top: 10px;
+  width: 25%;
+  padding: 3px;
+  margin-bottom: 30px;
+}
+
+.button-forms-register {
+  margin-top: 10px;
+  width: 40%;
+  padding: 3px;
+}
+
+.linksDiv-forms {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.link-forms {
+  color: white;
+}
+/* Termina reglas de estilo de login y register */
