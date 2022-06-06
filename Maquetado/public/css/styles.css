@@ -10,6 +10,7 @@ body{
 
 /* Para resoluciones de móvil: */
 @media (min-width:360px){
+
 .productos{
     position:relative;
     padding-bottom: 5%;
