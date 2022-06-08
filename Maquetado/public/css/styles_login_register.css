@@ -12,6 +12,41 @@ body {
   padding: 10px 10px 10px 10px;
 }
 
+div.top-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 95vw;
+}
+
+div.iconos-header2 {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  width: 20vw;
+  flex-direction: column;
+}
+
+div.logo-principal {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+div.barra-lupa {
+  display: flex;
+}
+
+.iconos-header {
+  color: #bea86c;
+  width: 95vw;
+}
 .caja-page-principal {
   display: flex;
   flex-direction: column;
