@@ -14,13 +14,17 @@ body{
 p{
     font-size: 12px;
 }
-
+a {
+    color: #bea86c;
+    text-decoration: none;
+  }
 header{
     width: 100vw;
 }
 .iconos-header {
     color: #bea86c;
     width: 95vw;
+    text-decoration: none;
   }
 
 div.top-header {
@@ -34,6 +38,7 @@ div.top-header {
 
   div.solo-iconos {
     display: flex;
+    text-decoration: none;
   }
   div.barra-lupa {
     display: flex;
