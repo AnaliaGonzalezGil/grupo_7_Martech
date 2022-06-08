@@ -104,7 +104,7 @@ div.marcas-elegibles2 {
   align-items: center;
 }
 div.marcas-elegibles2 img {
-  width: 100%;
+  width: 15vw;
   height: 55px;
   display: flex;
   justify-content: space-between;
