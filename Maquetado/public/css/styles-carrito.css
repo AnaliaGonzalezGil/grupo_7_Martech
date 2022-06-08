@@ -224,6 +224,7 @@ div.input i{
               display: flex;
             text-align: center;
             font-size: x-small;
+            justify-content: space-around;
           }
           
           footer i {
