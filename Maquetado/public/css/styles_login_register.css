@@ -11,6 +11,13 @@ body {
   width: 95vw;
   padding: 10px 10px 10px 10px;
 }
+div.solo-iconos {
+  display: flex;
+}
+a.links-header {
+  color: #bea86c;
+  text-decoration: none;
+}
 
 div.top-header {
   display: flex;
@@ -19,6 +26,16 @@ div.top-header {
   margin-left: 3%;
   margin-right: 3%;
   width: 95vw;
+}
+
+nav div.iconos-header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 95vw;
+  margin-bottom: 1%;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 div.iconos-header2 {
@@ -41,12 +58,20 @@ div.logo-principal {
 
 div.barra-lupa {
   display: flex;
+  margin-top: 20px;
 }
 
-.iconos-header {
+a.iconos-header {
   color: #bea86c;
-  width: 95vw;
+  text-decoration: none;
+  padding-right: 30px;
 }
+
+p.nombres-header {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
 .caja-page-principal {
   display: flex;
   flex-direction: column;
@@ -128,6 +153,27 @@ div.barra-lupa {
   color: white;
 }
 
+footer {
+  display: flex;
+  width: 95vw;
+  justify-content: space-around;
+  font-size: 10px;
+}
+footer.contactanos i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+footer h4 {
+  font-size: 12px;
+}
+
 @media (min-width: 768px) {
   .img-logo {
     width: 25vw;
@@ -165,5 +211,9 @@ div.barra-lupa {
   .div-forms {
     margin-top: 10px;
     margin-bottom: 15px;
+  }
+
+  div.barra-lupa {
+    margin-top: 0px;
   }
 }
