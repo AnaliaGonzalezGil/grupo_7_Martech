@@ -1,13 +1,15 @@
-*{
-    margin: 2px;
-    padding: 0px;
-    padding-right: 10px;
-    box-sizing: border-box;
+* { 
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
 body{
     background-color: #1e1d1d;
     box-sizing: content-box;
-    color: #bea86c;
+    color: #bea86c;  
+}
+main{
     width: 95vw;
     padding-left: 20px;
 }
@@ -19,14 +21,22 @@ a {
     text-decoration: none;
   }
 header{
-    width: 100vw;
+  width: 100%;
+  background-color:#3f3b34;
 }
 .iconos-header {
     color: #bea86c;
     width: 95vw;
     text-decoration: none;
   }
-
+  i {
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+  div.iconos-header2 i{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 div.top-header {
     display: flex;
     justify-content: flex-start;
@@ -52,13 +62,16 @@ div.top-header {
     align-items: center;
   }
 
-div.iconos-header{
+
+  nav div.iconos-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 3%;
-    width: 100vw;
-}
+    width: 95vw;
+    margin-bottom: 1%;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
 div.iconos-header p{
     margin-left: 5px;
     margin-right: 5px;
@@ -94,7 +107,49 @@ div.input i{
     justify-content: center;
     margin: 0px;
   }
+  .border-producto {
+    border-top: 2px solid #bea86c;
+    margin-top: 20px;
+    width:100vw;
+  }
+  footer {
+    text-align: center;
+    color:#bea86c;
+    margin-top: 20px;
+    width:100%;
+  }
+  footer p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .quienes-somos{
+    background-color: #6A5F31;
+    color:white;
+    width:150px;
+    height: 150px;
+  }
+  .contactanos{
+    background-color: #434750;
+    color:white;
+    width:120px;
+    height:150px;
+  }
+  footer h2{
+    margin-bottom: 10px;
+  }
+  .newsletter{
+    background-color: #2E3A23;
+    color:white;
+    width:120px;
+    height:150px;
+  }  
   
+
 /* Para resoluciones de móvil: */
 @media (min-width:360px){
 
@@ -122,7 +177,6 @@ div.input i{
     .cuenta{
         border-top: 3px solid #bea86c;
         padding-top: 2%;
-        border-bottom: 3px solid #bea86c;
         padding-bottom:2%;
         font-size: x-large;
     }
@@ -184,7 +238,6 @@ div.input i{
         .cuenta{
             border-top: 3px solid #bea86c;
             padding-top: 2%;
-            border-bottom: 3px solid #bea86c;
             padding-bottom:2%;
             font-size: x-large;
         }
@@ -209,7 +262,20 @@ div.input i{
             transform: translateY(-50%);
             font-size: large;
         }
+        .quienes-somos{
+          width:300px;
+          height: 150px;
+          padding-left: 20px;
+        }
+        .contactanos{
+          width:300px;
+          height:150px;
+        }
         
+        .newsletter{
+          width:300px;
+          height:150px;
+        }
         }
         footer.contactanos i {
             display: inline-block;
@@ -221,7 +287,7 @@ div.input i{
             display: inline-block;
           }
           footer {
-              display: flex;
+            display: flex;
             text-align: center;
             font-size: x-small;
             justify-content: space-around;
@@ -234,3 +300,5 @@ div.input i{
           footer h3 {
             font-size: 18px;
           }
+            
+        
