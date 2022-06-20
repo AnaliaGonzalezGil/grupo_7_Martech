@@ -116,6 +116,16 @@ p.nombres-header {
   flex-direction: column;
   justify-content: flex-start;
 }
+.div-forms-imagen {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+
+}
 
 .div-forms-principal {
   width: 80%;
@@ -126,11 +136,23 @@ p.nombres-header {
   font-size: 10px;
   margin-bottom: 3px;
 }
-
+.input-forms-imagen {
+  margin-bottom: 3px;
+  padding: 3px;
+  font-size: 1vw
+}
 .input-forms {
   height: 17px;
   margin-bottom: 3px;
   padding: 3px;
+}
+
+.button-forms-agregar {
+  margin-top: 5px;
+  width: 40%;
+  padding: 0.5%;
+  margin-bottom: 15px;
+  font-size: 135%;
 }
 
 .button-forms-login {
@@ -142,10 +164,15 @@ p.nombres-header {
 }
 
 .button-forms-register {
+  display: flex;
   margin-top: 10px;
-  width: 30%;
+  width:100%; 
   padding: 3px;
+  margin-bottom: 15px;
   font-size: 10px;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 .linksDiv-forms {
@@ -237,10 +264,24 @@ footer h2{
   }
 
   .button-forms-register {
+    display: flex;
+    margin-top: 10px;
+    width:100%; 
+    padding: 3px;
+    font-size: 10px;
+    justify-content: center;
+    text-align: center;
+    
+  }
+
+ /* 
+ --Corregido para mas de 768--
+  .button-forms-register {
     font-size: 15px;
     width: 15%;
     margin-bottom: 10px;
   }
+  */
 
   .link-forms {
     font-size: 18px;

@@ -1,50 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="icon" type="image/png" href="./images/Logo-Martech-Barra.jpg" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/09016572b7.js" crossorigin="anonymous"></script>  
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/acd9d6cd1d.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Detalle de producto</title>
-</head>
+
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
 <body>
-    <header>
-        <div class="top-header">
-            <div class="iconos-header2">
-                <i class="fa-brands fa-whatsapp"></i> <p>+ (xx) xxx- xxx</p>
-                <i class="fa-solid fa-comments"></i> <p> Contáctanos</p>
-            </div>
-            <div class="logo-principal">
-            <a href="/"><img src="./images/Logo-Martech-inv.png" width="150vw" height="150vh"/></a> 
-            <div class="Segundazos">
-                <p>Segundazos de primera</p>
-            </div>
-            </div>
-            <nav>
-                <div class="iconos-header">
-                    <div class="solo-iconos">
-                    <a class= "iconos" href="favoritos"><i class="fa-solid fa-star"></i> <p> Favoritos</p></a>
-                    <a href="login"><i class="fa-solid fa-user"></i> <p> Ingresar</p></a>
-                    <a href="register"><i class="fas fa-pencil"></i> <p> Registrarme</p></a>
-                    <a href="carrito"><i class="fa-solid fa-cart-shopping"></i><p> Carrito</p></a>
-                    </div>
-                    <div class="barra-lupa">
-                    <div class="barra-busqueda"> <input type="search"> </div>
-                    <div class="submit"><i class="fa fa-search"></i></div>
-                    </div>
-                </div>
-             </div>
-            </nav>
-        </div> 
-    </header>
     <main>
         <section>
             <article>
@@ -119,38 +79,7 @@
         </section> 
     </main>
 
-    <footer class="border-producto">
-    <div class="logo-footer">
-        <img src="./images/logo-cel.png" width="100" height="100" alt="logo footer">
-    </div>
-        <article>
-            <div class="quienes-somos">
-                <h2> Sobre Nosotros</h2>
-                <p>Somos Martech </p>
-                <p>Estamos en XXX</p>
-                <p>Fundados en 2022</p>
-                <p>¡Elígenos!</p>
-            </div> 
-        </article>
-        
-        <article>
-            <div class="contactanos">
-                <h2> ¡Hablemos!</h2>
-                <i class="fa-solid fa-phone"> </i>
-                <i class="fa-solid fa-comments"></i>
-                <i class="fa-brands fa-facebook"></i> 
-                <i class="fa-brands fa-instagram"></i>
-             </div> 
-        </article>
-
-        <article>
-            <div class="newsletter">
-                <h2>No te los pierdas</h2>
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <p>Suscribite a nuestro newsletter</p>
-                <p>¡Serás el primer@ en enterarte!</p>
-            </div> 
-        </article>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
+
 </html>

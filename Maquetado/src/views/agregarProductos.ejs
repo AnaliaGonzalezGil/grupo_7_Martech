@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/styles_login_register.css">
+    <%- include('./partials/head') %>
+    <%- include('./partials/header') %>
+        
+<body>
+    <div class="caja-page-principal">
+        <form class="page-forms" action="/login" method="POST">
+          <h4 class="mainTitle-page">Agregá tu producto</h4>
+          <div class="div-forms-principal">
+            <div class="div-forms">
+              <label class="label-forms" for="nombreP">Nombre del Producto</label>
+              <input class="input-forms" type="text" name="email" />
+            </div>
+            <div class="div-forms">
+                <label class="label-forms" for="descripcion">Descripcion</label>
+                <input class="input-forms" type="text" name="email" />
+            </div>
+            <div class="div-forms-imagen">
+            <label class="label-forms" for="subirImagen">Subir Imagen del Producto</label>
+            <input class="input-forms-imagen" type="file" name="subirImagen">
+            </div>
+            <div class="div-forms">
+                <label class="label-forms" for="precioV">Precio de venta</label>
+                <input class="input-forms" type="text" name="precioV" />
+            </div>
+            <div class="">
+                <label class="label-forms" for="oferta"> Artículo en oferta</label>
+                <input class="" type="checkbox" name="oferta">
+                
+                    <label class="label-forms" for="porcentajeDesc">% de descuento</label>
+                    <select name="porcentajeDesc" id="porcentajeDesc">
+                        <option value="5off">5% off</option>
+                        <option value="10off">10% off</option> 
+                        <option value="15off">15% off</option> 
+                        <option value="20off">20% off</option>
+                        <option value="25off">25% off</option>
+                        <option value="xoff">Oferta especial</option>
+                        <option value="other" selected>Otro</option>
+                    </select>
+            </div>
+            <div class="div-forms">
+                <label class="label-forms" for="marcaProd">Marca del producto</label>
+                <select name="marcaProd" id="marcaProd">
+                    <option value="alcatel">Alcatel</option>
+                    <option value="apple">Apple</option> 
+                    <option value="huawei">Huawei</option> 
+                    <option value="lg">LG</option>
+                    <option value="motorola">Motorola</option>
+                    <option value="nokia">Nokia</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="sony">Sony</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <option value="other" selected>Otro</option>
+                </select>
+            </div>
+              <div class="div-forms">
+                <label class="label-forms" for="modelo">Modelo</label>
+                <input class="input-forms" type="text" name="modelo" />
+              </div>
+
+            <br/>
+            <label class="label-forms" for="estilos">Selecciona tu color</label>
+            <select name="estilos" id="estilos">
+                <option value="azul">Azul</option>
+                <option value="blanco">Blanco</option>
+                <option value="celeste">Celeste</option>
+                <option value="dorado">Dorado</option>
+                <option value="grafito">Grafito</option>
+                <option value="gris">Gris</option>
+                <option value="gris_plata">Gris Plata</option>
+                <option value="negro">Negro</option>
+                <option value="rojo">Rojo</option>
+                <option value="rosa">Rosa</option>  
+                <option value="verde">Verde</option>
+                <option value="other" selected>Otro</option>
+            </select>
+            <label class="label-forms" for="otroColor">Otro:</label>
+            <input class="input-forms" type="text" name="otroColor" />
+            <br/>
+            <label class="label-forms" for="tamaño">Tamaño en pulgadas</label>
+            <select name="tamañoPulgadas" id="tamañoPulgadas">
+                <option value="menoscinco">Menor a 5"</option>
+                <option value="cincoaseis">5" a 6"</option>
+                <option value="seisymedio">6" a 6,5"</option>
+                <option value="masseis">Mayor a 6"</option>
+            </select>
+            <br/>
+            <br/>
+            <label class="label-forms" for="estadoequipo">Estado del equipo</label>
+            <select name="estadoequipo" id="estadoequipo">
+                <option value="excelente">Excelente</option>
+                <option value="muyBueno">Muy bueno</option>
+                <option value="bueno">Bueno</option>
+            </select>
+            <br/>
+            <br/>
+            <label class="label-forms" for="memoriaRam">Memoria Ram</label>
+            <select name="memoriaRam" id="memoriaRam">
+                <option value="2a4">2Gb a 4Gb</option>
+                <option value="5a6">5Gb a 6Gb</option>
+                <option value="8omas">8Gb o mayor</option>
+            </select>
+            <br/>
+            <br/>
+            <label class="label-forms" for="memoriainterna">Memoria Interna</label>
+            <select name="memoriainterna" id="memoriainterna">
+                <option value="menos128">Menor a 128Gb</option>
+                <option value="128a255">128Gb a 255Gb</option>
+                <option value="mas256">256Gb o mayor</option>
+            </select>
+            <br/>
+            <br/>
+            <div class="button-forms-register">
+            <button class="button-forms-agregar" type="submit">
+            Agregar
+          </button>
+          </div>
+        </form>
+      </div>
+   
+</body>
+<%- include('./partials/footer') %>
+</html>

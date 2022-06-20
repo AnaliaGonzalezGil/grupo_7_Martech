@@ -14,6 +14,9 @@ const  mainController={
     register: function(req,res){ 
         res.render("register") 
     },
+    agregarProductos: function(req,res){ 
+        res.render("agregarProductos") 
+    },
 }
 
 
