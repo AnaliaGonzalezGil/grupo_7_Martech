@@ -5,17 +5,18 @@
     <%- include('./partials/header') %>
         
 <body>
-    <div class="caja-page-principal">
-        <form class="page-forms" action="/login" method="POST">
-        <label class="label-forms" for="oferta"> Editar existente</label>
-        <input class="" type="checkbox" name="oferta">
-          <h4 class="mainTitle-page">Agregá tu producto</h4>
-          <div class="div-forms-principal">
+    <main>
+        <div class="caja-page-principal">
+            <form class="page-forms" action="/login" method="POST">
+            <label class="label-forms" for="oferta"> Editar existente</label>
+            <input class="" type="checkbox" name="oferta">
+            <h4 class="mainTitle-page">Agregá tu producto</h4>
+        <div class="div-forms-principal">
             <div class="div-forms">
               <label class="label-forms" for="nombreP">Nombre del Producto</label>
               <input class="input-forms" type="text" name="email" />
             </div>
-          <div class="div-forms">
+            <div class="div-forms">
                 <label class="label-forms" for="descripcion">Descripcion</label>
                 <input class="input-forms" type="text" name="email" />
             </div>
@@ -122,7 +123,7 @@
           </div>
         </form>
       </div>
-   
+    </main>
 </body>
 <%- include('./partials/footer') %>
 </html>

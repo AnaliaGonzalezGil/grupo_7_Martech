@@ -5,29 +5,30 @@
     <%- include('./partials/header') %>
         
 <body>
-    <div class="button-forms-register">
-        <article class="boton-editar">
-            <a href="/editar">
-            <p class="boton-editar">Editar</p>
-            </a>
-        </article>
-    </div>
-    <div class="caja-page-principal">
-        <form class="page-forms" action="/login" method="POST">
+    <main>
+        <div class="button-forms-register">
+            <article class="boton-editar">
+                <a href="/editar">
+                <p class="boton-editar">Editar</p>
+                </a>
+            </article>
+        </div>
+        <div class="caja-page-principal">
+            <form class="page-forms" action="/login" method="POST">
 
-          <h4 class="mainTitle-page">Agregá tu producto</h4>
-          <div class="div-forms-principal">
-            <div class="div-forms">
-              <label class="label-forms" for="nombreP">Nombre del Producto</label>
-              <input class="input-forms" type="text" name="email" />
-            </div>
-          <div class="div-forms">
+            <h4 class="mainTitle-page">Agregá tu producto</h4>
+            <div class="div-forms-principal">
+                <div class="div-forms">
+                <label class="label-forms" for="nombreP">Nombre del Producto</label>
+                <input class="input-forms" type="text" name="email" />
+             </div>
+             <div class="div-forms">
                 <label class="label-forms" for="descripcion">Descripcion</label>
                 <input class="input-forms" type="text" name="email" />
-            </div>
+             </div>
             <div class="div-forms-imagen">
-            <label class="label-forms" for="subirImagen">Subir Imagen del Producto</label>
-            <input class="input-forms-imagen" type="file" name="subirImagen">
+                <label class="label-forms" for="subirImagen">Subir Imagen del Producto</label>
+                <input class="input-forms-imagen" type="file" name="subirImagen">
             </div>
             <div class="div-forms">
                 <label class="label-forms" for="precioV">Precio de venta</label>
@@ -128,7 +129,7 @@
           </div>
         </form>
       </div>
-   
+    </main>
 </body>
 <%- include('./partials/footer') %>
 </html>

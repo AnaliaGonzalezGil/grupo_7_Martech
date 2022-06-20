@@ -15,7 +15,6 @@ header {
   background-color:#3f3b34 ;
 }
 main{
-  width: 95vw;
   padding: 10px 10px 10px 10px;
 }
 div.solo-iconos {
@@ -237,27 +236,23 @@ footer i {
   font-size: 2em;
   margin-bottom: 10px;
 }
-.quienes-somos{
-  background-color: #6A5F31;
-  color:white;
-  width:140px;
+.quienes-somos {
+  width: 120px;
   height: 150px;
-  padding-left: 20px;
+  margin-top: 20px;
 }
-.contactanos{
-  background-color: #434750;
-  color:white;
-  width:120px;
-  height:150px;
+.contactanos {
+  width: 120px;
+  height: 150px;
+  margin-top: 20px;
 }
 footer h2{
   margin-bottom: 10px;
 }
-.newsletter{
-  background-color: #2E3A23;
-  color:white;
-  width:120px;
-  height:150px;
+.newsletter {
+  width: 120px;
+  height: 150px;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {

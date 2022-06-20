@@ -13,8 +13,8 @@ body {
   
 main {
   padding-right: 20px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 5%;
+  margin-left: 5%;
   background-color:#1e1d1d;
 }
   
@@ -59,7 +59,6 @@ div.top-header {
   margin-left: 3%;
   margin-right: 3%;
   width: 95vw;
-  margin-bottom: 20px;
 }
 
 div.solo-iconos {
@@ -71,6 +70,7 @@ div.iconos-header2 i{
 }
 div.barra-lupa {
   display: flex;
+  margin-top: 10px;
 }
 
 div.container img {
@@ -94,6 +94,11 @@ footer.contactanos i {
 }
 div.contactanos {
   display: inline-block;
+}
+.border-producto {
+  border-top: 2px solid #bea86c;
+  margin-top: 20px;
+  width: 100vw;
 }
 div.logo-principal {
   display: flex;
@@ -219,7 +224,6 @@ div.input i {
   margin: 0px;
 }
 
-
 /* Para resoluciones de móvil: */
 @media (min-width: 360px) {
   .productos {
@@ -246,9 +250,7 @@ div.input i {
     border-bottom: 3px solid #bea86c;
     padding-bottom: 2%;
   }
-  .logo-footer{
-    display:none;
-  }
+  
 }
 
 .iconos-header {
@@ -370,6 +372,7 @@ div.centrar-buttons {
 footer {
   text-align: center;
   width:100vw;
+  margin-top: 20px;
 }
 footer p{
   margin-top: 5px;
@@ -380,6 +383,7 @@ footer i {
   font-size: 2em;
   margin-bottom: 10px;
 }
+
 .quienes-somos{
   width:120px;
   height: 150px;
