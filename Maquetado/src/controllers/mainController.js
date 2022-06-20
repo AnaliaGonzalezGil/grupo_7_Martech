@@ -17,6 +17,9 @@ const  mainController={
     agregarProductos: function(req,res){ 
         res.render("agregarProductos") 
     },
+    editarProductos: function(req,res){ 
+        res.render("editarProductos") 
+    },
 }
 
 

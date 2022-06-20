@@ -127,6 +127,17 @@ p.nombres-header {
 
 }
 
+.boton-editar{
+padding: .3%;
+font-size: 150%;
+border: grey solid 1px ;
+background-color: #ebebeb;
+color: black;
+border-radius: 5%;
+width: 20%;
+}
+
+
 .div-forms-principal {
   width: 80%;
   margin-bottom: 5px;
@@ -145,6 +156,16 @@ p.nombres-header {
   height: 17px;
   margin-bottom: 3px;
   padding: 3px;
+}
+
+.button-forms-editar {
+  margin-top: 5px;
+  width: 25%;
+  padding: 0.5%;
+  margin-bottom: 15px;
+  font-size: 135%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .button-forms-agregar {
