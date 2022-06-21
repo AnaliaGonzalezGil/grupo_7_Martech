@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="css/styles_login_register.css">
   <%- include('./partials/head') %>
@@ -16,11 +16,17 @@
               <label class="label-forms" for="contraseña">Contraseña</label>
               <input class="input-forms" type="password" name="contraseña" />
             </div>
+
+           <div class="div-terminos-condiciones">
+          <input type= "checkbox" name = "recordar-contraseña">
+          <label class="checkbox" for="recordar-contraseña"> Recordar contraseña </label>
+          
+          </div>
           </div>
           <button class="button-forms-login" type="submit">Ingresar</button>
           <div class="linksDiv-forms">
-            <a class="link-forms" href="#">Olvide mi contraseña </a>
-            <a class="link-forms" href="/register">Crear cuenta</a>
+            <a class="link-login-register" href="#">Olvide mi contraseña </a>
+            <a class="link-login-register" href="/register">Crear cuenta</a>
           </div>
         </form>
       </div>
