@@ -218,7 +218,7 @@ div.input i{
             padding-bottom: 5%;
         }
         .img-item{
-            width:30vw;
+            width:20vw;
             margin-right: 7%;
             margin-left: 7%;
         }
@@ -251,6 +251,7 @@ div.input i{
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             font-size: large;
+            padding-bottom: 10%;
         }
         
         .carrito-derecha2{
@@ -262,6 +263,7 @@ div.input i{
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             font-size: large;
+            padding-bottom:22%;
         }
         .quienes-somos{
           width:300px;
