@@ -56,9 +56,9 @@ const  mainController={
     carrito: function(req,res){ 
         res.render("carrito") 
     },
-    detalle: function(req,res){ 
+    /*detalle: function(req,res){ 
         res.render("detalle") 
-    },
+    },*/
     detalle: (req, res) => {
         let celulares = listaProductos.find(celulares => celulares.id == req.params.celularesId);
         console.log(celulares)

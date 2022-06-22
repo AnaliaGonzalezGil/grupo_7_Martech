@@ -4,6 +4,7 @@ const path = require("path");
 //const app = express();
 
 const mainController = require("../controllers/mainController");
+
 router.get("/detalle",mainController.index);
 router.get("/",mainController.index);
 router.get("/carrito",mainController.carrito);
