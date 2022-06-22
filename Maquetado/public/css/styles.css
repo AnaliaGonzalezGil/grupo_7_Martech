@@ -12,7 +12,8 @@ body {
 }
   
 main {
-  padding-right: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: 5%;
   margin-left: 5%;
   background-color:#1e1d1d;
@@ -44,13 +45,15 @@ header {
   width: 95vw;
 }
 nav div.iconos-header {
+  padding: 2px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 95vw;
+  width: 100vw;
   margin-bottom: 1%;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+
 }
 div.top-header {
   display: flex;
@@ -75,7 +78,7 @@ div.barra-lupa {
 
 div.container img {
   width: 95vw;
-  height: 10vh;
+  height: 20vh;
 }
 
 footer {
@@ -107,7 +110,20 @@ div.logo-principal {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
+
+div.product img{
+  margin-top: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ebebeb;
+  border-radius: 10%;
+}
+
+
 div.marcas-elegibles {
   box-sizing: border-box;
   display: flex;
@@ -137,17 +153,12 @@ div.marcas-elegibles2 img {
   justify-content: space-between;
   align-items: center;
 }
-nav div.iconos-header {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 95vw;
-  margin-bottom: 1%;
-}
+
 div.iconos-header p {
   margin-left: 5px;
   margin-right: 5px;
 }
+
 div.iconos-header2 {
   display: flex;
   justify-content: left;
@@ -159,7 +170,7 @@ div.iconos-header2 {
 }
 
 header nav {
-  width: 95vw;
+  width: 100vw;
 }
 .zoom{
   margin-top: 20px;
@@ -170,6 +181,9 @@ div.modelos-premium {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  }
+  div.modelos-premium article {
+  padding-left: 15px;  
 }
 div.modelos-premium h3 {
   width: 95vw;
@@ -293,6 +307,11 @@ div.input i {
 .main-article-producto {
   line-height: 1.5;
   padding-left: 20px;
+}
+
+.main-article-producto img{
+  width: 50%;
+  height: 50%;
 }
 .precio-DP{
   padding-left: 20px;

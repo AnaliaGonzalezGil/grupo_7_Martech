@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <link rel="stylesheet" href="../css/styles.css">
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
 
@@ -11,31 +11,35 @@
             
                 <div class="breakpoint">
                     <div class="centrar-producto">
-                        <img src="./images/iphone-frente.png" class= "zoom" alt="Celular frente">
+                        <img src="../images/iphone-frente.png" class= "zoom" alt="Celular frente">
                      </div>
                     <div class="centrar-producto">
-                         <img src="./images/iphone-costado.png"  class= "zoom" alt="Celular de costado">
-                         <img src="./images/iphone-atras.png" class= "zoom" alt="Celular parte de atras">
+                         <img src="../images/iphone-costado.png"  class= "zoom" alt="Celular de costado">
+                         <img src="../images/iphone-atras.png" class= "zoom" alt="Celular parte de atras">
                     </div>
                 <div>
-                    <img src="./images/Hotsale.png" class="hotsale">
+                    <img src="../images/Hotsale.png" class="hotsale">
                 </div>
                     <div class="main-article-producto">
-                        <h3> iPhone XS Max </h3>
+                        <h3>Precio: USD <%= celulares.precioVenta %></h3>
                          <ul>
                         <li>Empresa:Liberado </li>
-                        <li>En stock</li>
-                        <li>Condición:Muy bueno</li>
+                        <li>En Stock</li>
+                        <li>Condición:<%= celulares.estadoEquipo %></li>
                         <p>Luce y funciona como nuevo. No tiene detalles de uso. Ni marcas en los bordes, ni en la pantalla, ni en la parte de atrás.</p>
-                        <li>Color: Gris espacial</li>
-                        <img src="./images/Gris_espacial.png" alt="color del celular">
+                        <li>Color: <%= celulares.color %></li>
+                        <img
+                        src="../images/<%= celulares.img %>"
+                        class="ps-round ps-image ps-opacity-min"
+                        alt="celular"
+                    />
                          </ul>
                     </div>
                 </div>
-                    <div class="precio-DP">
+                <div class="precio-DP">
                         <p>Precio en un pago</p>
-                        <h3>$152.642</h3>
-                        <p>6 cuotas de $25.440 sin interes</p>  
+                        <h3><%= celulares.precioVenta %></h3>
+                        <p>6 cuotas de 100 sin interes</p>  
                     </div>
                 
 
