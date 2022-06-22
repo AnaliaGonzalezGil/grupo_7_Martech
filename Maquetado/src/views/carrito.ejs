@@ -2,6 +2,8 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
+<link rel="stylesheet" href="css/styles-carrito.css"> 
+
     
 <main>
     <section class="productos">
@@ -18,6 +20,7 @@
                 <div>Estado: 9/10</div>
             </h4>
             <h3 class="carrito-precio"><i class="fa-solid fa-dollar-sign"></i>300</h3>
+        </br>
             <button class="boton-retirar">Retirar del Carrito</button>
             </div>
            
@@ -36,18 +39,38 @@
                 <div>Estado: 10/10</div>
             </h4>
             <h3 class="carrito-precio"><i class="fa-solid fa-dollar-sign"></i>1,000</h3>
+        </br>
             <button class="boton-retirar">Retirar del Carrito</button>
             </div>
+        </article>
+
+        <article class="item-carrito">
+            <div class="carrito-izquierda">
+            <img src="./images/iphone-frente.PNG" alt="imagen del item" class="img-item">
+            
+            </div>
+            
+            <div class="carrito-derecha1">
+            <h4>
+                <div>Marca: APPLE </div>
+                <div>Modelo: IPHONE XS MAX</div>
+                <div>Estado: 8/10</div>
+            </h4>
+            <h3 class="carrito-precio"><i class="fa-solid fa-dollar-sign"></i>350</h3>
+        </br>
+            <button class="boton-retirar">Retirar del Carrito</button>
+            </div>
+           
         </article>
         
     </section>
 
     <section class="cuenta">
         <article class="rubros">
-            <h5>SubTotal: <i class="fa-solid fa-dollar-sign"></i>1,300</h5>
+            <h5>SubTotal: <i class="fa-solid fa-dollar-sign"></i>1,650</h5>
             <h5>Descuentos: 10%</h5>
             <h5>Impuestos: 10%</h5>
-            <h4>Total: <i class="fa-solid fa-dollar-sign"></i>1.300</h4>
+            <h3>Total: <i class="fa-solid fa-dollar-sign"></i>1,650</h3>
         </article>
         <article >
             <button type="button" class="boton-pago">Pagar</button>
