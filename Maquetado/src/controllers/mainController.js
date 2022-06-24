@@ -19,7 +19,7 @@ const listaProductos=[
 
     {id: 2,
     nombreProducto:"Samsung S22",
-    img:"samsung-s22Negro.png",
+    img:"Samsungs22Negro.png",
     precioVenta:1000,
     oferta:false ,
     descuento:0,
