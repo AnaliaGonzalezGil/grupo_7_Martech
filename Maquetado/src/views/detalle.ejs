@@ -11,29 +11,29 @@
             
                 <div class="breakpoint">
                     <div class="centrar-producto">
-                        <img src="../images/iphone-frente.png" class= "zoom" alt="Celular frente">
+                        <img src="../images/products/iphone-frente.png" class= "zoom" alt="Celular frente">
                      </div>
                     <div class="centrar-producto">
-                         <img src="../images/iphone-costado.png"  class= "zoom" alt="Celular de costado">
-                         <img src="../images/iphone-atras.png" class= "zoom" alt="Celular parte de atras">
+                         <img src="../images/products/iphone-costado.png"  class= "zoom" alt="Celular de costado">
+                         <img src="../images/products/iphone-atras.png" class= "zoom" alt="Celular parte de atras">
                     </div>
                 <div>
-                    <img src="../images/Hotsale.png" class="hotsale">
+                    <img src="../images/products/Hotsale.png" class="hotsale">
                 </div>
                     <div class="main-article-producto">
                         <h3>Precio: USD <%= celulares.precioVenta %></h3>
-                         <ul>
+                        <ul>
                         <li>Empresa:Liberado </li>
                         <li>En Stock</li>
                         <li>Condición:<%= celulares.estadoEquipo %></li>
                         <p>Luce y funciona como nuevo. No tiene detalles de uso. Ni marcas en los bordes, ni en la pantalla, ni en la parte de atrás.</p>
                         <li>Color: <%= celulares.color %></li>
                         <img
-                        src="../images/<%= celulares.img %>"
+                        src="../images/products/<%= celulares.img %>"
                         class="ps-round ps-image ps-opacity-min"
                         alt="celular"
                     />
-                         </ul>
+                        </ul>
                     </div>
                 </div>
                 <div class="precio-DP">
@@ -49,6 +49,9 @@
                         </form>
                         <form action="/Detalle_de_producto" method="POST" style="display:inline">
                             <button class= comprar-button-producto type="submit">Comprar </button>
+                        </form>
+                        <form action="/editar/<%=celulares.id %>" method="GET" style="display:inline">
+                        <a href="/products/editar/<%=celulares.id %>"><button class= comprar-button-producto type="submit">Editar </button></a>  
                         </form>
                     </div>
                 
