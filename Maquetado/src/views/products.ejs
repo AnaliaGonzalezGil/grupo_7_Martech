@@ -1,4 +1,4 @@
-«<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Listado de productos'}) %>
@@ -18,12 +18,12 @@
 				<section class="product-box">
 					<a href="/products/<%= articulo.id %>">
 						<figure class="product-box_image">
-							<img src="/images/products/<%= articulo.image %>" alt="imagen de producto">
+							<img src="/images/products/<%= articulo.img %>" alt="imagen de producto">
 						</figure>
 						<article class="product-box_data">
-							<h2>$<%= articulo.price %></h2>
-							<span><%= articulo.discount %> % OFF</span>
-							<p><%= articulo.name %></p>
+							<h2>$<%= articulo.precioVenta %></h2>
+							<span><%= articulo.descuento %> % OFF</span>
+							<p><%= articulo.nombreProducto %></p>
 							<i class="fas fa-truck"></i>
 						</article>
 					</a>
