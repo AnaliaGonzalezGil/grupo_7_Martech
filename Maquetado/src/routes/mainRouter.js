@@ -15,3 +15,4 @@ router.get("/agregar",mainController.agregarProductos);
 router.get("/editar",mainController.editarProductos);
 
 module.exports = router;
+
