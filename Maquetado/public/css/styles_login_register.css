@@ -10,10 +10,17 @@ body {
   color: #bea86c;
   
 }
+
 header {
   width: 100%;
-  background-color:#3f3b34 ;
+  background-color:#151618 ;
+  margin:auto;
 }
+.iconos-header {
+  color: #bea86c;
+  width: 95vw;
+}
+
 main{
   padding: 10px 10px 10px 10px;
 }
@@ -34,15 +41,23 @@ div.top-header {
   width: 95vw;
 }
 
+
+div.iconos-header2 i{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 nav div.iconos-header {
+  padding: 2px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 95vw;
+  width: 100vw;
   margin-bottom: 1%;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+
 }
+
 
 div.iconos-header2 {
   display: flex;

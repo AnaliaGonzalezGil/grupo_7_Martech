@@ -14,7 +14,7 @@ const methodOverride =  require('method-override');
 app.use(express.json());
 //app.use(cookieParser());
 app.use(express.static(path.join(__dirname,"../public")));
-app.use(methodOverride('_method')); 
+app.use(methodOverride('_method'));
 
 /**Template Engine */
 app.set("view engine", "ejs");

@@ -13,6 +13,7 @@ router.get("/detalle/:celularesId?",mainController.detalle);
 router.get("/register",mainController.register);
 router.get("/agregar",mainController.agregarProductos);
 router.get("/editar",mainController.editarProductos);
+router.get("/products",mainController.products);
 
 module.exports = router;
 

@@ -56,15 +56,15 @@ const controller = {
 		console.log(id)
 		for (let i=0; i<products.length; i++) {
 			if (products[i].id == id) {
-				products[i].name = req.body.name;
-				products[i].price = req.body.price;
-				products[i].discount = req.body.discount;
-				products[i].category = req.body.category;
-				products[i].description = req.body.description;
+				products[i].nombreProducto = req.body.nombreProducto;
+				products[i].precioVenta = req.body.precioVenta;
+				products[i].modelo = req.body.modelo;
+				products[i].estadoEquipo = req.body.estadoEquipo;
+				//products[i].description = req.body.description;
 			}
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8')
-		res.redirect(`/products/`)
+		res.redirect('/products/')
 	},
 
 	// Delete - Delete one product from DB
@@ -80,3 +80,4 @@ const controller = {
 };
 
 module.exports = controller;
+module.exports = productsFilePath;

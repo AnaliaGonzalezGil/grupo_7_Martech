@@ -29,10 +29,10 @@ router.post('/', upload.single('productImage') , productsController.store);
 
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/:id', productsController.detail); 
+router.get('/detalle/:id', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productsController.edit); 
+router.get('/editar/:id', productsController.edit); 
 router.put('/', productsController.update); 
 
 
