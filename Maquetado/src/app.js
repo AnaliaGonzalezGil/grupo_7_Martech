@@ -25,7 +25,7 @@ app.listen(3000, () => {
   console.log("Servidor Funcionando");
 });
 app.use("/", mainRouter);
-app.use("/products", products);
+app.use("/", products);
 
 
 module.exports = app;

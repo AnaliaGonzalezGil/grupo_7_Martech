@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../database/inventario.json');
+let inventario = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -13,19 +13,19 @@ const controller = {
 	},
 
 	// Detail - Detail from one product
-	detail: (req, res) => {
+	detalle: (req, res) => {
 		let idProducto = req.params.id;
 		let product;
-		for (let i=0; i<products.length; i++) {
-            if (products[i].id == idProducto) {
-				product = products[i];
+		for (let i=0; i<inventario.length; i++) {
+            if (inventario[i].id == idProducto) {
+				product = inventario[i];
 			}
 		}
 		res.render('detalle', { product } );
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
+	agregarProductos: (req, res) => {
 		res.render('agregarProductos')
 	},
 	
@@ -33,19 +33,19 @@ const controller = {
 	store: (req, res) => {
 		let product = req.body;
 		product.image = req.file.filename;
-		product.id = (products.length + 1);
-		products.push(product);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+		product.id = (inventario.length + 1);
+		inventario.push(product);
+		fs.writeFileSync(productsFilePath, JSON.stringify(inventario), 'utf-8');
 		res.redirect('/products')
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
+	editar: (req, res) => {
 		let id = req.params.id;
 		globalThis.productToEdit = null;
-		for (let i=0; i<products.length; i++) {
-			if (products[i].id == id) {
-				productToEdit = products[i];
+		for (let i=0; i<inventario.length; i++) {
+			if (inventario[i].id == id) {
+				productToEdit = inventario[i];
 			}
 		}
 		res.render('editarProductos', { productToEdit })
@@ -54,16 +54,16 @@ const controller = {
 	update: (req, res) => {
 		let id = productToEdit.id;
 		console.log(id)
-		for (let i=0; i<products.length; i++) {
-			if (products[i].id == id) {
-				products[i].nombreProducto = req.body.nombreProducto;
-				products[i].precioVenta = req.body.precioVenta;
-				products[i].modelo = req.body.modelo;
-				products[i].estadoEquipo = req.body.estadoEquipo;
+		for (let i=0; i<inventario.length; i++) {
+			if (inventario[i].id == id) {
+				inventario[i].nombreProducto = req.body.nombreProducto;
+				inventario[i].precioVenta = req.body.precioVenta;
+				inventario[i].modelo = req.body.modelo;
+				inventario[i].estadoEquipo = req.body.estadoEquipo;
 				//products[i].description = req.body.description;
 			}
 		}
-		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8')
+		fs.writeFileSync(productsFilePath, JSON.stringify(inventario), 'utf-8')
 		res.redirect('/products/')
 	},
 
@@ -71,13 +71,13 @@ const controller = {
 	destroy : (req, res) => {
 		let id = req.params.id;
 		console.log(id);
-		products = products.filter(function(product){
+		inventario = inventario.filter(function(product){
 			return product.id != id;
 		})
-		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8')
+		fs.writeFileSync(productsFilePath, JSON.stringify(inventario), 'utf-8')
 		res.redirect('/products/')
 	},
 };
 
 module.exports = controller;
-module.exports = productsFilePath;
+// module.exports = productsFilePath;

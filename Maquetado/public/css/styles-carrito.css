@@ -1,155 +1,5 @@
-* { 
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
-body{
-    background-color: #1e1d1d;
-    box-sizing: content-box;
-    color: #bea86c;  
-}
-main{
-    width: 95vw;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-p{
-    font-size: 12px;
-}
-a {
-    color: #bea86c;
-    text-decoration: none;
-  }
-/*header{
-  width: 100%;
-  background-color:#3f3b34;
-}
-.iconos-header {
-    color: #bea86c;
-    width: 95vw;
-    text-decoration: none;
-  }*/
-  i {
-    margin-left: 20px;
-    margin-right: 50px;
-  }
- /* div.iconos-header2 i{
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-div.top-header {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 95vw;
-  }*/
-  div.solo-iconos {
-    display: flex;
-    text-decoration: none;
-  }
-  div.barra-lupa {
-    display: flex;
-  }
-  div.logo-principal {
-    display: flex;
-    justify-content: center;
-    width: 50vw;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
-
-
-/*  nav div.iconos-header {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin-bottom: 1%;
-    margin-right: 10px;
-    margin-top: 20px;
-  }
-div.iconos-header p{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-div.iconos-header2 {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    margin-top: 3%;
-    width: 20vw;
-    flex-direction: column;
-  }
-
-div.iconos-header2 i{
-    padding-right: 3vw;    
-}
-*/
-
-div.input{ 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 3%;
-    width: 100vw;
-}
-
-div.input i{ 
-    margin-left: 10px;
-}
-.iconos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0px;
-  }
-  .border-producto {
-    border-top: 2px solid #bea86c;
-    margin-top: 20px;
-    width:100vw;
-  }
-  footer {
-    text-align: center;
-    color:#bea86c;
-    margin-top: 20px;
-    width:100%;
-  }
-  footer p{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 15px;
-  }
-  footer i {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  .quienes-somos{
-    background-color: #6A5F31;
-    color:white;
-    width:150px;
-    height: 150px;
-  }
-  .contactanos{
-    background-color: #434750;
-    color:white;
-    width:120px;
-    height:150px;
-  }
-  footer h2{
-    margin-bottom: 10px;
-  }
-  .newsletter{
-    background-color: #2E3A23;
-    color:white;
-    width:120px;
-    height:150px;
-  }  
-  
-
+ 
 /* Para resoluciones de móvil: */
 @media (min-width:360px){
 
@@ -161,11 +11,12 @@ div.input i{
         width:30vw;
         margin-right: 7%;
         margin-left: 7%;
+        margin-top: 10%;
     }
+   
     .item-carrito{
         display:flex;
         margin-bottom: 5%;
-        margin-top: 10%;
         margin-right: 7%;
         margin-left: 7%;
     }
@@ -220,11 +71,11 @@ div.input i{
             width:20vw;
             margin-right: 7%;
             margin-left: 7%;
+            margin-top: 10%;
         }
         .item-carrito{
             display:flex;
             margin-bottom: 5%;
-            margin-top: 10%;
             margin-right: 7%;
             margin-left: 7%;
         
@@ -264,43 +115,5 @@ div.input i{
             font-size: large;
             padding-bottom:22%;
         }
-        .quienes-somos{
-          width:300px;
-          height: 150px;
-          padding-left: 20px;
-        }
-        .contactanos{
-          width:300px;
-          height:150px;
-        }
-        
-        .newsletter{
-          width:300px;
-          height:150px;
-        }
-        }
-        footer.contactanos i {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            flex-wrap: wrap;
-          }
-          div.contactanos {
-            display: inline-block;
-          }
-          footer {
-            display: flex;
-            text-align: center;
-            font-size: x-small;
-            justify-content: space-around;
-          }
-          
-          footer i {
-            font-size: 2em;
-            margin-bottom: 10px;
-          }
-          footer h3 {
-            font-size: 18px;
-          }
-            
+      }
         

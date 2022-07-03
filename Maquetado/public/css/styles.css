@@ -71,6 +71,7 @@ div.agregar-editar{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-right: 25px;
 }
 div.solo-iconos {
   display: flex;
@@ -138,8 +139,8 @@ div.marcas-elegibles {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-bottom:5px ;
   padding-top: 5px;
+  background-color: #1e1d1d;
 }
 
 div.marcas-elegibles img {
@@ -188,6 +189,7 @@ header nav {
 .zoom{
   margin-top: 20px;
 }
+
 div.modelos-premium {
   width: 100%;
   display: flex;
@@ -263,6 +265,10 @@ div.input i {
   justify-content: center;
   margin: 0px;
 }
+.img-iphone{
+  width:80px;
+  height:150px;
+};
 
 /* Para resoluciones de móvil: */
 @media (min-width: 360px) {
@@ -270,12 +276,13 @@ div.input i {
     position: relative;
     padding-bottom: 5%;
   }
-  .img-item {
-    width: 40%;
-  }
   .item-carrito {
     display: flex;
     margin: auto;
+  }
+  .img-iphone{
+    width:200px;
+    height:380px;
   }
   .boton-retirar {
     margin: 0;

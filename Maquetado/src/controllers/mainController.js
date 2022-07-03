@@ -52,14 +52,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/products.json');
+const productsFilePath = path.join(__dirname, '../database/inventario.json');
 let inventario = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const  mainController={
     index: function(req,res){ 
-        res.render("index",) 
+        let products = inventario;
+        res.render("index",{products}) 
     },
     carrito: function(req,res){ 
         res.render("carrito") 
@@ -68,7 +69,7 @@ const  mainController={
         res.render("detalle") 
     },*/
     detalle: (req, res) => {
-        let celulares = products.find(celulares => celulares.id == req.params.celularesId);
+        let celulares = inventario.find(celulares => celulares.id == req.params.celularesId);
         console.log(celulares)
         res.render("detalle", { celulares: celulares });
     },
@@ -81,12 +82,12 @@ const  mainController={
     agregarProductos: function(req,res){ 
         res.render("agregarProductos") 
     },
-    editarProductos: function(req,res){ 
-        res.render("editarProductos") 
-        let celulares = products.find(celulares => celulares.id == req.params.celularesId);
-        console.log(celulares)
-        res.render("detalle", { celulares: celulares });
-    },
+    // editarProductos: function(req,res){ 
+    //     res.render("editarProductos") 
+    //     let celulares = inventario.find(celulares => celulares.id == req.params.celularesId);
+    //     console.log(celulares)
+    //     res.render("detalle", { celulares: celulares });
+    // },
     products: function(req,res){ 
         res.render("products") 
     },

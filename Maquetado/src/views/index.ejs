@@ -3,72 +3,69 @@
     <%- include('./partials/head') %>
     <%- include('./partials/header') %>
 <body>
+
+    <nav>
+            
+        <div class="marcas-elegibles">
+            <article>
+                <a href="#samsung"> <img src="./images/motorola-mini.png" width="125" height="30"></a>
+            </article>
+            <article>
+                <a href="#motorola"><img src="./images/samsung-mini.png" width="125" height="30"></a>
+            </article>
+            <article>
+                <a href="#apple"><img src="./images/iphone-mini.png" width="125" height="30"></a>
+                </article>
+            <article>
+                <a href="#xiaomi"><img src="./images/tesla-mini.png" width="125" height="30"></a>
+                </article>
+            <article>
+                <a href="#huawei"><img src="./images/huawei-mini.png" width="125" height="30"></a>
+            </article>
+        </div>
+    </nav>
+
+    <nav>
+    <article>
+        <div class="container">
+            <img src="./images/apple-banner.jpg">
+        </div> 
+    </article>
+     </nav>
     <main>
-        <nav>
-            
-            <div class="marcas-elegibles">
-                <article>
-                    <a href="#samsung"> <img src="./images/motorola-mini.png" width="125" height="30"></a>
-                </article>
-                <article>
-                    <a href="#motorola"><img src="./images/samsung-mini.png" width="125" height="30"></a>
-                </article>
-                <article>
-                    <a href="#apple"><img src="./images/iphone-mini.png" width="125" height="30"></a>
-                    </article>
-                <article>
-                    <a href="#xiaomi"><img src="./images/tesla-mini.png" width="125" height="30"></a>
-                    </article>
-                <article>
-                    <a href="#huawei"><img src="./images/huawei-mini.png" width="125" height="30"></a>
-                </article>
-            </div>
-        </nav>
-        <nav>
-            
-            <div class="marcas-elegibles2">
-                <article>
-                    <a href="#samsung"> <img src="./images/motorola-tb.png" width="125" height="30"></a>
-                </article>
-                <article>
-                    <a href="#motorola"><img src="./images/samsung-tb.png" width="125" height="30"></a>
-                </article>
-                <article>
-                    <a href="#apple"><img src="./images/iphone-tb.png" width="125" height="30"></a>
-                    </article>
-                <article>
-                    <a href="#xiaomi"><img src="./images/tesla-tb.png" width="125" height="30"></a>
-                    </article>
-                <article>
-                    <a href="#huawei"><img src="./images/huawei-tb.png" width="125" height="30"></a>
-                </article>
-            </div>
-        </nav>
-        <nav>
-        <article>
-            <div class="container">
-                <img src="./images/apple-banner.jpg">
-            </div> 
-        </article>
-        
-        </nav>
+   
 
         <div class="modelos-premium">
             
                 <h3>NUESTROS PREMIUM</h3>
-                <article>
+                <% for (let i=0; i<products.length; i++){  %>
+                    <article>
+                        <div class="product" id="product">
+                     <a href="/detalle/<%= products[i].id %>" >
+                
+                        <img src= "../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
+                     </a>
+                     <h4><%= products[i].nombreProducto %> </h4>
+                     <p> <%= products[i].precioVenta %> USD </p>
+                
+                        </div>
+                    </article>
+                <% } %>
+    
+                
+            <!-- <article>
                 <div class="product" id="product_1">
                    <a href="detalle/1">
-                        <img src="./images/iphone-frente2.png" width="200" height="200"/>
+                        <img src="./images/products/iphone-frente2.png" width="200" height="200"/>
                    </a>
                     <h4>Premium N° 1</h4>
-                    <p>1.000 USD</p>
-               
-            </article>
-            <article>
+                    <p>600 USD</p>
+                </div>
+            </article> -->
+            <!-- <article>
                 <div class="product" id="product_2">
                     <a href="detalle/2">
-                    <img src="./images/SamsungS22Negro.png" width="200" height="200" />
+                    <img src="./images/products/SamsungS22Negro.png" width="200" height="200" />
                     </a>
                     <h4>Premium N° 2</h4>
                     <p>900 USD</p>
@@ -76,64 +73,41 @@
             </article>
             <article>
                 <div class="product" id="product_3">
-                    <a href="detalle/3">
-                    <img src="./images/tesla-usado.png" width="200" height="200" />
-                    </a>
+                    <img src="./images/products/Samsung-S22blanco.jpg" width="200" height="200" />
                     <h4>Premium N° 3</h4>
-                    <p>1.050 USD</p>
-                </div>
-            </article>
-            <article>
-                <div class="product" id="product_4">
-                    <img src="./images/Samsung-S22blanco.jpg" width="200" height="200" />
-                    <h4>Premium N° 4</h4>
                     <p>820 USD</p>
                 </div>
             </article>
             <article>
-                <div class="product" id="product_5">
-                    <img src="./images/Samsung-S22rosa.png" width="200" height="200" />
-                    <h4>Premium N° 5</h4>
-                    <p>780 USD</p>
+                <div class="product" id="product_4">
+                    <a href="detalle/3">
+                    <img src="./images/products/tesla-usado.png" width="200" height="200" />
+                    </a>
+                    <h4>Premium N° 4</h4>
+                    <p>1.050 USD</p>
                 </div>
-            </article>
-        </div>
-        
+            </article>   
+        </div> -->
+
         <div class="mas-vendidos">
             <h3> MAS VENDIDOS</h3>
             <article>
-                <div class="product" id="product_6">
-                    <img src="./images/iphone-frente2.png" width="200" height="200" />
+                <div class="product" id="product_1">
+                    <a href="/detalle/1">
+                    <img src="./images/products/iphone-frente2.png" width="200" height="200" />
+                    </a>
                     <h4>Vendido N° 1</h4>
                     <p>500 USD</p>
                 </div>
             </article>
+           
             <article>
-                <div class="product" id="product_7">
-                    <img src="./images/motog200.png" width="200" height="200" />
+                <div class="product" id="product_5">
+                    <a href="/detalle/5">
+                    <img src="./images/products/Samsung-S22rosa.png" width="200" height="200" />
+                    </a>
                     <h4>Vendido N° 2</h4>
-                    <p>950 USD</p>
-                </div>
-            </article>
-            <article>
-                <div class="product" id="product_8">
-                    <img src="./images/motog200.png" width="200" height="200" />
-                    <h4>Vendido N° 3</h4>
-                    <p>650 USD</p>
-                </div>
-            </article>
-            <article>
-                <div class="product" id="product_9">
-                    <img src="./images/motog200.png" width="200" height="200" />
-                    <h4>Vendido N° 4</h4>
-                    <p>1.000 USD</p>
-                </div>
-            </article>
-            <article>
-                <div class="product" id="product_10">
-                    <img src="./images/motog200.png" width="200" height="200" />
-                    <h4>Vendido N° 5</h4>
-                    <p>660 USD</p>
+                    <p>780 USD</p>
                 </div>
             </article>
         </div>

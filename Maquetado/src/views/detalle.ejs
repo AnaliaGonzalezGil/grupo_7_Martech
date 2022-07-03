@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="../css/styles.css">
+    
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
+<link rel="stylesheet" href="/css/styles.css">
 
 <body>
     <main>
@@ -11,35 +12,30 @@
             
                 <div class="breakpoint">
                     <div class="centrar-producto">
-                        <img src="../images/products/iphone-frente.png" class= "zoom" alt="Celular frente">
+                        <img src="../images/products/<%= product.img1 %>" class= "zoom" alt="Celular frente">
                      </div>
                     <div class="centrar-producto">
-                         <img src="../images/products/iphone-costado.png"  class= "zoom" alt="Celular de costado">
-                         <img src="../images/products/iphone-atras.png" class= "zoom" alt="Celular parte de atras">
+                         <img src="../images/products/<%= product.img2 %>"  class= "zoom" alt="Celular costado">
+                         <img src="../images/products/<%= product.img3%>" class= "zoom" alt="Celular atras">
                     </div>
                 <div>
                     <img src="../images/products/Hotsale.png" class="hotsale">
                 </div>
                     <div class="main-article-producto">
-                        <h3>Precio: USD <%= celulares.precioVenta %></h3>
+                        <h3>Precio: USD <%= product.precioVenta %></h3>
                         <ul>
                         <li>Empresa:Liberado </li>
                         <li>En Stock</li>
-                        <li>Condición:<%= celulares.estadoEquipo %></li>
+                        <li>Condición:<%= product.estadoEquipo %></li>
                         <p>Luce y funciona como nuevo. No tiene detalles de uso. Ni marcas en los bordes, ni en la pantalla, ni en la parte de atrás.</p>
-                        <li>Color: <%= celulares.color %></li>
-                        <img
-                        src="../images/products/<%= celulares.img %>"
-                        class="ps-round ps-image ps-opacity-min"
-                        alt="celular"
-                    />
-                        </ul>
+                        <li>Color: <%= product.color %></li>
+                       
                     </div>
                 </div>
                 <div class="precio-DP">
                         <p>Precio en un pago</p>
-                        <h3><%= celulares.precioVenta %></h3>
-                        <p>6 cuotas de 100 sin interes</p>  
+                        <h3> USD <%= product.precioVenta %></h3>
+                        <p>6 cuotas de <%= product.precioVenta /6 %> USD sin interés</p>  
                     </div>
                 
 
@@ -50,8 +46,8 @@
                         <form action="/Detalle_de_producto" method="POST" style="display:inline">
                             <button class= comprar-button-producto type="submit">Comprar </button>
                         </form>
-                        <form action="/editar/<%=celulares.id %>" method="GET" style="display:inline">
-                        <a href="/products/editar/<%=celulares.id %>"><button class= comprar-button-producto type="submit">Editar </button></a>  
+                        <form action="/editar/<%=product.id %>" method="GET" style="display:inline">
+                        <a href="/products/editar/<%=product.id %>"><button class= comprar-button-producto type="submit">Editar </button></a>  
                         </form>
                     </div>
                 
@@ -65,21 +61,21 @@
                 </div>
 
                 <div class="caracteristicas-producto">
-                    <h3 class="margin-caracteristicas">Características</h3>
-                    <p>El Apple iPhone XS Max es el iPhone más grande que se haya lanzado a la fecha, con una pantalla Super Retina OLED de 6.5 pulgadas. Compartiendo el resto de sus características con el iPhone XS, encontramos un procesador A12 Bionic con 64GB, 256GB o 512GB de almacenamiento, cámara dual de 12 MP con zoom óptico y estabilización óptica de imagen, parlantes stereo, resistencia al agua IP68, desbloqueo por rostro Face ID y corre iOS 12.</p>
+                    <h3 class="margin-caracteristicas">Descripción</h3>
+                    <p> <%= product.descripcion %></p>
                 </div>
                 <div class="lista-caracteristicas-producto">
-                    <p><i class="fa-solid fa-mobile-screen"></i> Tamaño de pantalla:6.5"</p>
-                    <p><i class="fa-solid fa-camera-retro"></i>Cámara principal:12 Mpx</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i> Tamaño de pantalla: <%= product.resolucion %> "</p>
+                    <p><i class="fa-solid fa-camera-retro"></i>Cámara principal:<%= product.camara %> Mpx</p>
                     <p><i class="fa-solid fa-maximize"></i>Dimensiones Perfil: 7.7 mm</p>
-                    <p><i class="fa-solid fa-sim-card"></i>Dual SIM:No</p>
+                    <p><i class="fa-solid fa-sim-card"></i>Dual SIM: <%= product.dualSim %></p>
                 
                 </div>
                 <div class="lista-caracteristicas-producto" >
-                        <p><i class="fa-solid fa-microchip"></i>Memoria RAM:4 GB</p>
-                        <p><i class="fa-solid fa-mobile-screen-button"></i>Sistema Operativo:IOS 11</p>
-                        <p><i class="fa-solid fa-satellite-dish"></i>Señal:4G</p>
-                        <p ><i class="fa-solid fa-server"></i>Memoria Interna:64GB</p>
+                        <p><i class="fa-solid fa-microchip"></i>Memoria RAM: <%= product.memoriaRam %>GB</p>
+                        <p><i class="fa-solid fa-mobile-screen-button"></i>Sistema Operativo:<%= product.os %></p>
+                        <p><i class="fa-solid fa-satellite-dish"></i>Señal:<%= product.senal %>G</p>
+                        <p ><i class="fa-solid fa-server"></i>Memoria Interna:<%= product.memoriaInterna %>GB</p>
                 </div>
               </article>
              
