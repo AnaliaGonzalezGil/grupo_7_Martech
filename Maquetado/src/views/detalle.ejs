@@ -2,24 +2,25 @@
 <html lang="en">
     
 <%- include('./partials/head') %>
-<%- include('./partials/header') %>
+
 <link rel="stylesheet" href="/css/styles.css">
 
 <body>
+    <%- include('./partials/header') %>
     <main>
         <section>
             <article>
             
                 <div class="breakpoint">
                     <div class="centrar-producto">
-                        <img src="../images/products/<%= product.img1 %>" class= "zoom" alt="Celular frente">
+                        <img src="/images/products/<%= product.img1 %>" class= "zoom" alt="Celular frente">
                      </div>
                     <div class="centrar-producto">
-                         <img src="../images/products/<%= product.img2 %>"  class= "zoom" alt="Celular costado">
-                         <img src="../images/products/<%= product.img3%>" class= "zoom" alt="Celular atras">
+                         <img src="/images/products/<%= product.img2 %>"  class= "zoom" alt="Celular costado">
+                         <img src="/images/products/<%= product.img3%>" class= "zoom" alt="Celular atras">
                     </div>
                 <div>
-                    <img src="../images/products/Hotsale.png" class="hotsale">
+                    <img src="/images/products/Hotsale.png" class="hotsale">
                 </div>
                     <div class="main-article-producto">
                         <h3>Precio: USD <%= product.precioVenta %></h3>
@@ -40,14 +41,17 @@
                 
 
                     <div class="centrar-buttons">
-                        <form action="/Detalle_de_producto" method="POST" style="display:inline">
+                        <form action="/Detalle_de_producto"  style="display:inline">
                             <button class= carrito-producto type="submit">Agregar al carrito <i class="fa-solid fa-cart-plus"></i></button>
                         </form>
-                        <form action="/Detalle_de_producto" method="POST" style="display:inline">
+                        <form action="/Detalle_de_producto"  style="display:inline">
                             <button class= comprar-button-producto type="submit">Comprar </button>
                         </form>
-                        <form action="/editar/<%=product.id %>" method="GET" style="display:inline">
-                        <a href="/products/editar/<%=product.id %>"><button class= comprar-button-producto type="submit">Editar </button></a>  
+                        <form action="/products/editar/<%=product.id %>"  style="display:inline">
+                       <button class= comprar-button-producto type="submit">Editar </button></a>  
+                        </form>
+                         <form action="/products/<%=product.id %>?_method=DELETE" method="POST" style="display:inline">
+                        <button class= comprar-button-producto type="submit">Eliminar </button>
                         </form>
                     </div>
                 

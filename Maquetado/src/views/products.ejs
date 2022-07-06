@@ -15,15 +15,15 @@
 		
 			<h3>Todos los productos</h3>
 		
-			<% for (let i=0; i<products.length; i++) { %>
+			<% for (let i=0; i<inventario.length; i++) { %>
 			<article>
 			<div class="product" id="product">
-				<a href="/detalle/<%= products[i].id %>">
-							<img src="../images/products/<%= products[i].imgIndex %>" width="200" height="200" alt="imagen de producto">
+				<a href="/products/detalle/<%= inventario[i].id %>">
+							<img src="../images/products/<%= inventario[i].imgIndex %>" width="200" height="200" alt="imagen de producto">
 				</a>
-								<h2>$<%= products[i].precioVenta %></h2>
-								<span><%= products[i].descuento %> % OFF</span>
-								<p><%= products[i].nombreProducto %></p>
+								<h2>$<%= inventario[i].precioVenta %></h2>
+								<span><%= inventario[i].descuento %> % OFF</span>
+								<p><%= inventario[i].nombreProducto %></p>
 							</div>	
 							</article>
 						
