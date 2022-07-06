@@ -4,14 +4,13 @@ const createError = require("http-errors");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
-const logger = require("morgan");
 const mainRouter = require("./routes/mainRouter");
 const products = require("./routes/products");
 
 /** apps -use */
 app.use(express.urlencoded({ extended: false }));
-app.use(logger("dev"));
 app.use(express.json());
+
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method"));
 
