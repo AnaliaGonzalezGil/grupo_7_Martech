@@ -53,7 +53,8 @@ const controller = {
   // Update - Method to update
   update: (req, res) => {
     let id = productToEdit.id;
-    console.log(id);
+    let product = req.body;
+    console.log(product);
     for (let i = 0; i < inventario.length; i++) {
       if (inventario[i].id == id) {
         inventario[i].nombreProducto = req.body.nombreProducto;
