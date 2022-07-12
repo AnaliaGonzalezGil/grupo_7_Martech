@@ -132,6 +132,16 @@ div.product img{
   border-radius: 10%;
 }
 
+div.product-detalle img{
+  margin-top: 50px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ebebeb;
+  border-radius: 10%;
+  height: 20vh;
+}
 
 div.marcas-elegibles {
   box-sizing: border-box;
@@ -280,10 +290,10 @@ div.input i {
     display: flex;
     margin: auto;
   }
-  .img-iphone{
+  /* .img-iphone{
     width:200px;
     height:380px;
-  }
+  } */
   .boton-retirar {
     margin: 0;
     position: absolute;
@@ -308,12 +318,30 @@ div.input i {
   text-align: center;
   margin-bottom: 20px;
 }
+.centrar-producto img{
+  width: 40vw;
+  height: 30vh;
+  margin-top: 1px;
+  padding-left: 2px; margin-top: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ebebeb;
+  border-radius: 10%;
+  padding-right: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ebebeb;
+  border-radius: 10%;
+}
 .hotsale {
   animation-name: hotsale;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   margin-top: 50px;
   margin-left: 20px;
+  margin-right: 50px;
 }
 @keyframes hotsale {
   0% {
@@ -329,14 +357,7 @@ div.input i {
   
 }
 
-.zoom {
-  transition: transform 2s;
-  margin-left: 5px;
-}
-.zoom:hover {
-  transform: scale(1.5);
-  padding-right: 20px;
-}
+
 .main-article-producto {
   line-height: 1.5;
   padding-left: 20px;
@@ -420,6 +441,15 @@ div.centrar-buttons {
   padding: 10px;
   font-size: 1.5em;
 }
+article div.centrar-producto{
+  display: flex;
+}
+article div.breakpoint{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 footer {
   text-align: center;
@@ -460,13 +490,22 @@ footer h2{
     display: flex;
     justify-content: space-around;
     margin-bottom: 0px;
+    width: 100%;
+    
   }
-
+  .zoom {
+    transition: transform 2s;
+    margin-left: 5px;
+  }
+  /* .zoom:hover {
+    transform: scale(1.5);
+    padding-right: 20px;
+  } */
   .main-article-producto {
     display: flex;
     width: 50%;
     flex-direction: column;
-    padding: 50px;
+    padding: 5px;
   }
   .centrar-producto {
     display: flex;
@@ -502,13 +541,14 @@ footer h2{
     display: flex;
     justify-content: space-around;
     margin-bottom: 0px;
+    width: 100%;
   }
 
   .main-article-producto {
     display: flex;
     width: 50%;
     flex-direction: column;
-    padding: 50px;
+    padding: 5px;
   }
   .centrar-producto {
     display: flex;
