@@ -6,6 +6,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const mainRouter = require("./routes/mainRouter");
 const products = require("./routes/products");
+const users = require("./routes/users");
 
 /** apps -use */
 app.use(express.urlencoded({ extended: false }));
@@ -23,5 +24,6 @@ app.listen(3000, () => {
 });
 app.use("/", mainRouter);
 app.use("/products", products);
+app.use("/", users);
 
 module.exports = app;
