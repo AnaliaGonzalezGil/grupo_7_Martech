@@ -5,16 +5,24 @@
   <%- include('./partials/header') %>
     <main>
         <div class="caja-page-principal">
+        <% if (locals.errors) { %>
+        <% for ( let oneError in errors) { %> 
+        <p><%= errors[oneError].msg %> </p>  
+        <% } %>
+        <% } %>
         <form class="page-forms" method = "POST" action="/register" enctype="multipart/form-data">
           <h4 class="mainTitle-page">¡Crea tu cuenta!</h4>
           <div class="div-forms-principal">
             <div class="div-forms">
-              <label class="label-forms" for="email">Nombre</label>
-              <input class="input-forms" type="text" name="Nombre" />
+              <label class="label-forms" for="nombre">Nombre</label>
+              <input class="input-forms" type="text" name="nombre" />
+              <%if (locals.errors && errors.nombre) { %>
+                <%= errors.nombre.msg %>
+                <% } %>
             </div>
             <div class="div-forms">
-              <label class="label-forms" for="email">Apellido</label>
-              <input class="input-forms" type="text" name="Apellido" />
+              <label class="label-forms" for="apellido">Apellido</label>
+              <input class="input-forms" type="text" name="apellido" />
             </div>
             <div class="div-forms">
               <label class="label-forms" for="email">Email</label>
@@ -27,10 +35,10 @@
               <input class="input-forms" type="password" name="password" />
             </div>
             <div class="div-forms">
-              <label class="label-forms" for="password"
+              <label class="label-forms" for="password2"
                 >Repite tu contraseña</label
               >
-              <input class="input-forms" type="password" name="password" />
+              <input class="input-forms" type="password" name="password2" />
             </div>
           </div>
           </button>

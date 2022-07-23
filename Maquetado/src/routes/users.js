@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 const multer = require("multer");
 const path = require("path");
-
+const { body } = require("express-validator");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/users"));
@@ -28,4 +28,11 @@ router.get("/login", usersController.login);
 
 router.get("/profile/:userID", usersController.profile);
 
+const validations = [
+  body("nombre").notEmpty().withMessage("tienes que escribir un nombre"),
+  body("email").isEmail().withMessage("tienes que escribir un correo válido"),
+  body("password").notEmpty().withMessage("Escribe tu contraseña"),
+  body("password2").notEmpty().withMessage("Escribe tu contraseña nuevamente"),
+]
 module.exports = router;
+
