@@ -4,6 +4,7 @@ const usersController = require("../controllers/usersController");
 const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
+const app = require("../app");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/users"));
@@ -16,11 +17,17 @@ const storage = multer.diskStorage({
     cb(null, filex);
   },
 });
+const validations = [
+  body("nombre").notEmpty().withMessage("Tienes que escribir un nombre"),
+  body("apellido").notEmpty().withMessage("Tienes que escribir un apellido"),
+  body("email").isEmail().withMessage("Tienes que escribir un correo válido"),
+  body("password").notEmpty().withMessage("Escribe tu contraseña"),
 
+]
 const upload = multer({ storage });
 
 router.get("/register", usersController.register);
-router.post("/register", upload.single("imagendePerfil"), usersController.store);
+router.post("/register", upload.single("imagendePerfil"),validations, usersController.store);
 
 // router.post("/users/register", usersController.store);
 
@@ -28,11 +35,6 @@ router.get("/login", usersController.login);
 
 router.get("/profile/:userID", usersController.profile);
 
-const validations = [
-  body("nombre").notEmpty().withMessage("tienes que escribir un nombre"),
-  body("email").isEmail().withMessage("tienes que escribir un correo válido"),
-  body("password").notEmpty().withMessage("Escribe tu contraseña"),
-  body("password2").notEmpty().withMessage("Escribe tu contraseña nuevamente"),
-]
+
 module.exports = router;
 

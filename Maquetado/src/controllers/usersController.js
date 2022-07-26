@@ -33,8 +33,8 @@ const controller = {
         console.log(req); // en el video para este metodo usan el find all minuto 20 aprox//
        const resultValidation = validationResult(req);
        if (resultValidation.errors.length > 0) {
-       return res.send("register",{
-        errors: resultValidation.mapped(),
+       return res.render("register", {
+        errors: resultValidation.mapped(),old: req.body
         });
         }
 
@@ -43,7 +43,7 @@ const controller = {
             apellido:req.body.apellido,
             email:req.body.email,
             password: bcryptjs.hashSync(req.body.password,10),
-            password2: bcryptjs.hashSync(req.body.password2,10),
+            // password2: bcryptjs.hashSync(req.body.password2,10),
             imagendePerfil:req.body.imagendePerfil};
             user.id = usuarios.length + 1;
             user.imagendePerfil = user.id + "imagendePerfil";
@@ -61,7 +61,7 @@ const controller = {
         }
         usuarios.push(user)
             fs.writeFileSync(usersFilePath, JSON.stringify(usuarios), "utf-8");
-            res.redirect("/login")
+            res.redirect("/")
 
         },
     login: function (req, res) {

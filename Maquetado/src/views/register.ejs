@@ -5,41 +5,52 @@
   <%- include('./partials/header') %>
     <main>
         <div class="caja-page-principal">
-        <% if (locals.errors) { %>
+        <!-- <% if (locals.errors) { %>
         <% for ( let oneError in errors) { %> 
         <p><%= errors[oneError].msg %> </p>  
         <% } %>
-        <% } %>
+        <% } %> -->
         <form class="page-forms" method = "POST" action="/register" enctype="multipart/form-data">
           <h4 class="mainTitle-page">¡Crea tu cuenta!</h4>
           <div class="div-forms-principal">
             <div class="div-forms">
               <label class="label-forms" for="nombre">Nombre</label>
-              <input class="input-forms" type="text" name="nombre" />
-              <%if (locals.errors && errors.nombre) { %>
-                <%= errors.nombre.msg %>
+              <input class="input-forms" type="text" name="nombre" value="<%= locals.old && old.nombre %>">
+                            <%if (locals.errors && errors.nombre) { %>
+               <p style="color:white ; font-weight: 1;"> <%= errors.nombre.msg %></p>
                 <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="apellido">Apellido</label>
-              <input class="input-forms" type="text" name="apellido" />
+              <input class="input-forms" type="text" name="apellido" value="<%= locals.old && old.apellido %>">
+              
+              <%if (locals.errors && errors.apellido) { %>
+                <p style="color:white ; font-weight: 1;"> <%= errors.apellido.msg %></p>
+                <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="email">Email</label>
-              <input class="input-forms" type="email" name="email" />
+              <input class="input-forms" type="email" name="email" value="<%= locals.old && old.email %>">
+             
+              <%if (locals.errors && errors.email) { %>
+                <p style="color:white ; font-weight: 1;"><%= errors.email.msg %></p>
+                <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="password"
                 >Ingresa una contraseña</label
               >
               <input class="input-forms" type="password" name="password" />
+              <%if (locals.errors && errors.password) { %>
+                <p style="color:white ; font-weight: 1;"> <%= errors.password.msg %></p>
+                <% } %>
             </div>
-            <div class="div-forms">
+            <!-- <div class="div-forms">
               <label class="label-forms" for="password2"
                 >Repite tu contraseña</label
               >
               <input class="input-forms" type="password" name="password2" />
-            </div>
+            </div> -->
           </div>
           </button>
           <div class="div-forms">
