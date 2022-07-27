@@ -5,7 +5,8 @@ const usersFilePath = path.join(__dirname, "../database/users.json");
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 
-const nombrefile={
+const controller = {
+
 fileName: "./database/users.json",
     getData: function(){
         return JSON.parse(fs.readFileSync(this.fileName,"utf-8"));
@@ -23,10 +24,9 @@ fileName: "./database/users.json",
         let userFound =allUsers.find(oneUser => oneUser[field] === text);
         return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en el json//
     },
-}
-const controller = {
+
     register: (req,res) => {
-        return res.render("/login");
+        return res.render("/register");
     },
 
     store: function(req,res,next){
@@ -43,7 +43,6 @@ const controller = {
             apellido:req.body.apellido,
             email:req.body.email,
             password: bcryptjs.hashSync(req.body.password,10),
-            // password2: bcryptjs.hashSync(req.body.password2,10),
             imagendePerfil:req.body.imagendePerfil};
             user.id = usuarios.length + 1;
             user.imagendePerfil = user.id + "imagendePerfil";
@@ -64,32 +63,14 @@ const controller = {
             res.redirect("/")
 
         },
-    login: function (req, res) {
-    return res.render("login");
+    login: (req, res,next) => {
+    return res.render("index");
     
 },
     profile: (req,res) => {
-    return res.render("perfil")
+    return res.render("/index")
 },
-    // fileName: "./database/users.json",
-    // getData: function(){
-    //     return JSON.parse(fs.readFileSync(this.fileName,"utf-8"));
-    // }, //trae todo el Json para despues leerlo y ver si existe usuario-clave o cualquier campo que querramos//
-    // findAll: function() {
-    //     return this.getData(); //trae todo getData//
-    // },
-    // findByPk: function(id) {
-    //     let allUsers = this.findAll();
-    //     let userFound = allUsers.find(oneUser => oneUser.id === id);
-    //     return userFound; //trae toda la info encontrada si coincide ID puesto con ID del Json//
-    // },
-    // findByField: function(field,text) {
-    //     let allUsers = this.findAll();
-    //     let userFound =allUsers.find(oneUser => oneUser[field] === text);
-    //     return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en el json//
-    // },
-};
 
-// console.log(nombreArchivo.findByField("email","baucott0@parallels.com"))
+};
 
 module.exports = controller;

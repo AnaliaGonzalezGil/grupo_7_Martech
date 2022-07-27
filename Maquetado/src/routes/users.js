@@ -5,6 +5,8 @@ const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
 const app = require("../app");
+const validations = require("../middlewares/validations");
+const nombreFile = require("../middlewares/nombreFile");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/users"));
@@ -17,13 +19,7 @@ const storage = multer.diskStorage({
     cb(null, filex);
   },
 });
-const validations = [
-  body("nombre").notEmpty().withMessage("Tienes que escribir un nombre"),
-  body("apellido").notEmpty().withMessage("Tienes que escribir un apellido"),
-  body("email").isEmail().withMessage("Tienes que escribir un correo válido"),
-  body("password").notEmpty().withMessage("Escribe tu contraseña"),
 
-]
 const upload = multer({ storage });
 
 router.get("/register", usersController.register);
@@ -32,6 +28,8 @@ router.post("/register", upload.single("imagendePerfil"),validations, usersContr
 // router.post("/users/register", usersController.store);
 
 router.get("/login", usersController.login);
+router.post("/index",nombreFile, usersController.profile);
+
 
 router.get("/profile/:userID", usersController.profile);
 

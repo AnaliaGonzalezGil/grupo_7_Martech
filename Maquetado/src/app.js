@@ -7,13 +7,15 @@ const methodOverride = require("method-override");
 const mainRouter = require("./routes/mainRouter");
 const products = require("./routes/products");
 const users = require("./routes/users");
-
+const session = require("express-session")
 /** apps -use */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method"));
+
+app.use(session( {secret: "Mensaje Secreto"}));
 
 /**Template Engine */
 app.set("view engine", "ejs");
