@@ -1,7 +1,5 @@
 
 const express = require("express");
-const router = express.Router();
-const path = require("path");
 const { body } = require("express-validator");
 const app = require("../app");
 

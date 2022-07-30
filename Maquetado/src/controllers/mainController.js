@@ -15,9 +15,9 @@ const mainController = {
     res.render("carrito");
   },
 
-  login: function (req, res) {
-    res.render("login");
-  },
+  // login: function (req, res) {
+  //   res.render("login");
+  // },
   register: function (req, res) {
     res.render("register");
   },

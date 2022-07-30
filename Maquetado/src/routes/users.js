@@ -28,7 +28,7 @@ router.post("/register", upload.single("imagendePerfil"),validations, usersContr
 // router.post("/users/register", usersController.store);
 
 router.get("/login", usersController.login);
-router.post("/index",nombreFile, usersController.profile);
+router.post("/index", nombreFile, usersController.profile);
 
 
 router.get("/profile/:userID", usersController.profile);
