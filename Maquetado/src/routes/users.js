@@ -19,20 +19,21 @@ const storage = multer.diskStorage({
     cb(null, filex);
   },
 });
-
 const upload = multer({ storage });
+
+
 
 router.get("/register", usersController.register);
 router.post("/register", upload.single("imagendePerfil"),validations, usersController.store);
 
-// router.post("/users/register", usersController.store);
-
 router.get("/login", usersController.login);
-router.post("/index", nombreFile, usersController.profile);
+router.post("/login", usersController.procesoLogin);
 
 
-router.get("/profile/:userID", usersController.profile);
+// router.get("/profile/:userID", usersController.profile);
 
 
 module.exports = router;
+
+
 

@@ -2,8 +2,9 @@
 const express = require("express");
 const { body } = require("express-validator");
 const app = require("../app");
+const fs = require("fs");
 
-const nombrefile = {
+const nombreFile = {
     fileName: "./database/users.json",
     getData: function(){
         return JSON.parse(fs.readFileSync(this.fileName,"utf-8"));
@@ -20,6 +21,10 @@ const nombrefile = {
         let allUsers = this.findAll();
         let userFound =allUsers.find(oneUser => oneUser[field] === text);
         return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en el json//
+
     }}
 
-    module.exports = nombrefile;
+    module.exports = nombreFile;
+
+
+

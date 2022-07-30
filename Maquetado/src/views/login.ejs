@@ -11,6 +11,9 @@
             <div class="div-forms">
               <label class="label-forms" for="email">Email</label>
               <input class="input-forms" type="text" name="email" />
+              <%if (locals.errors && errors.email) { %>
+                <p style="color:white ; font-weight: 1;"> <%= errors.email.msg %></p>
+                 <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="contraseña">Contraseña</label>
