@@ -3,14 +3,17 @@ const path = require("path");
 const bcryptjs = require("bcryptjs")
 const usersFilePath = path.join(__dirname, "../database/users.json");
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-const { validationResult } = require("express-validator");
+const { validationResult, check } = require("express-validator");
 const nombrefile = require("../middlewares/nombreFile.js");
-const nombreFile = require("../middlewares/nombreFile.js");
-const salt = bcryptjs.genSalt(11);
+const { errors } = require("express-validator");
+
 
 const controller = {
+    check: (req,res) => {
+        return res.render("check", {usuarios:usuarios})
+    },
     register: (req,res) => {
-        return res.render("/register");
+        return res.render("register");
     },
 
     store: function(req,res,next){
@@ -26,7 +29,7 @@ const controller = {
             nombre: req.body.nombre,
             apellido:req.body.apellido,
             email:req.body.email,
-            password: bcryptjs.hashSync(req.body.password,salt),
+            password: bcryptjs.hashSync(req.body.password,10),
             imagendePerfil:req.body.imagendePerfil};
             user.id = usuarios.length + 1;
             user.imagendePerfil = user.id + "imagendePerfil";
@@ -53,27 +56,66 @@ const controller = {
 
 },
 procesoLogin: (req, res) => {
-    let userToLogin = nombreFile.findByField("email",req.body.email);
-
-    if (userToLogin){
-        let passwordOK = bcryptjs.compareSync(req.body.contraseña, userToLogin.password);
-        if (passwordOK) {            
-            return res.redirect("/");
+    let errors = validationResult(req);
+    if (errors.isEmpty()){
+        let usersJSON = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"), {errors:errors});
+        let users;
+        if (usersJSON =="") {
+        users =[];
+        }else {
+        users= usersJSON;
+        }}else{
+            return res.render("login", {errors: errors.errors})
         }
-    }
-    return res.render("login",{
-        errors: {
-            email: {
-                msg: "Credenciales Inválidas"
+        for( let i=0; i< usuarios.length; i++) {
+                        if(usuarios[i].email == req.body.email){
+                            if (bcryptjs.compareSync(req.body.password, usuarios[i].password)){
+                            usuarioALoguearse= usuarios[i];
+                            req.session.userLogged= usuarioALoguearse;
+                            if(req.body.recordarUsuario) {
+                                res.cookie('recordame', req.body.email, {maxAge: 60000})
+                                return res.redirect('/');
+                                }
+                                console.log(req.session.userLogged);
+                                console.log("recordame");
+                                
+        }}}},
+
+    
+    // let userLogged = nombreFile.findByField("email",req.body.email);
+    // let usuarioALoguearse2;
+    // if (userLogged){
+    //     let passwordOK = bcryptjs.compareSync(req.body.password, userLogged.password);
+    //     if (passwordOK) {  
+    //         for( let i=0; i< usuarios.length; i++) {
+    //             if(usuarios[i].email == req.body.email){
+    //                 if (bcryptjs.compareSync(req.body.password, usuarios[i].password)){
+    //                 usuarioALoguearse= usuarios[i];
+    //                 req.session.userLogged= usuarioALoguearse;
+    //                 if(req.body.recordarUsuario != undefined) {
+    //                     res.cookie('recordame', usuarioALoguearse.email, {maxAge: 6000000})
+    //                     }
+    //             }
+    //             }
+    //         }
+    //         console.log(usuarioALoguearse)
+    //         return res.redirect("/");
+    //     }
+    // }else{
+
+    // return res.render("login",{ 
+    //     errors: {
+    //         email: {
+    //             msg: "Credenciales Inválidas"
                 
-            }
-        },
-    })
-},
+    //         }}
+    //     },
+    //     )}}
+
     profile: (req,res) => {
     return res.render("index")
-},
+}
 
-};
+}
 
 module.exports = controller;
