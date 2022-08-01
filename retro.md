@@ -7,3 +7,4 @@ Nuestras retrospectivas se encuentran en los siguientes enlaces:
 4th Sprint https://app.moqups.com/Fy6DoYIgrPDatFsbwwvJvccInRqDE2Ko/view/page/aa9df7b72
 
 5th Sprint https://app.moqups.com/Fy6DoYIgrPDatFsbwwvJvccInRqDE2Ko/view/page/aa9df7b72
+
