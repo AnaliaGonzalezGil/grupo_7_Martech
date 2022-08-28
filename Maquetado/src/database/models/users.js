@@ -1,22 +1,23 @@
 module.exports = (sequelize, DataTypes) => {
+    
     let alias = "Users";
     let cols = {
         id: {
-            type: DataTypes.SMALLINT(6).UNSIGNED,
+            type: DataTypes.BIGINT(6).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         firstName: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
             },
         lastName: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
             },    
         email: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
                 },    
         contrasenia: {
@@ -24,10 +25,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             },    
         imagenPerfil: {
-            type: DataTypes.VARCHAR(250),
+            type: DataTypes.STRING(250),
             },        
         esAdmin: {
-            type: DataTypes.VARCHAR(5),
+            type: DataTypes.STRING(5),
             },                                              
             }
 
@@ -45,6 +46,6 @@ const User = sequelize.define(alias,cols,config);
 //                 as: "product",
 //                 foreignKey: "color_id"
 //                 })}
-//                 return User
+                return User
 
         }

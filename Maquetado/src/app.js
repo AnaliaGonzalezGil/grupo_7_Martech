@@ -35,4 +35,8 @@ app.use("/", mainRouter);
 app.use("/products", products);
 app.use("/", users);
 
+const db = require("./database/models");
+db.sequelize.sync().then((req) => {
+    console.log(req.models);
+});
 module.exports = app;

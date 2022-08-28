@@ -2,13 +2,13 @@ module.exports = (sequelize, DataTypes) => {
     let alias = "Marca";
     let cols = {
         id: {
-            type: DataTypes.SMALLINT(6).UNSIGNED,
+            type: DataTypes.BIGINT(6).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         nombre: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
             },
             }
@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
 const Marca = sequelize.define(alias,cols);
 
 Marca.associate = function (models) {
-            Marca.hasMany(models.products, { 
-                as: "product",
+            Marca.hasMany(models.Product, { 
+                as: "products",
                 foreignKey: "marca_id"
                 })}
                 return Marca

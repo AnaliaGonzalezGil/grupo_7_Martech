@@ -15,21 +15,25 @@
 		
 			<h3>Todos los productos</h3>
 		
-			<% for (let i=0; i<inventario.length; i++) { %>
+			<% for (let i=0; i< productos.length; i++) { %>
 			<article>
 			<div class="product" id="product">
-				<a href="/products/detalle/<%= inventario[i].id %>">
-							<img src="../images/products/<%= inventario[i].imgIndex %>" width="200" height="200" alt="imagen de producto">
+				<a href="/products/detalle/<%= productos[i].id %>">
+							 <img src="../images/products/<%= productos[i].imgIndex %>" width="200" height="200" alt="imagen de producto">
 				</a>
-								<h2>$<%= inventario[i].precioVenta %></h2>
-								<span><%= inventario[i].descuento %> % OFF</span>
-								<p><%= inventario[i].nombreProducto %></p>
+								<h2>$<%= productos[i].precioVenta %></h2>
+								<span><%= productos[i].nombreProducto %></span>
+									<p><%= productos[i].categoy %></p>
 							</div>	
 							</article>
 						
 						
 			
-			
+			<!-- <% for( let i = 0; i < productos.length; i++ ) { %>
+		<li>
+			<a href="/products/<%= productos[i].marca %>"><%= productos[i].nombreProducto %></a>
+		</li>
+		<% } %> -->
 	
 		
 		    <% } %>
@@ -39,6 +43,7 @@
 </main>
 	<!-- footer -->
 	<%- include('partials/footer') %>
+	
 	<!-- /footer -->
 </body>	
 </html>
