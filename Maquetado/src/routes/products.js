@@ -6,6 +6,7 @@ const path = require("path");
 // ************ Controller Require ************
 const productsController = require("../controllers/productsController");
 
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/products"));
@@ -25,8 +26,8 @@ const upload = multer({ storage });
 router.get("/", productsController.list);
 
 /*** CREATE ONE PRODUCT ***/
-router.get("/agregar", productsController.list);
-router.post("/", upload.single("productImage"), productsController.list);
+router.get("/agregar", productsController.agregarProductos);
+router.post("/", upload.single("productImage"), productsController.store);
 
 /*** GET ONE PRODUCT ***/
 router.get("/detalle/:id", productsController.list);

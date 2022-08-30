@@ -52,7 +52,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         marca_id: {
-            type: dataTypes.BIGINT(6),
+            type: dataTypes.SMALLINT(6),
             allowNull: false
         },
         resolucion: {
@@ -94,23 +94,24 @@ let config = {
     
 const Product = sequelize.define(alias,cols,config)
 
-// Product.associate = function (models) {
-//     Product.belongsTo(models.Marca, { 
-//         as: "marca",
-//         foreignKey: "marca_id"
-//     })}
-// // Product.associate = function (models) {
-//     Product.belongsTo(models.colors, { 
-//         as: "color",
-//         foreignKey: "color_id"
-//         })}
+Product.associate = function (models) {
+    Product.belongsTo(models.Marca, { 
+        as: "marca",
+        foreignKey: "marca_id"
+    })}
+
+Product.associate = function (models) {
+    Product.belongsTo(models.Color, { 
+        as: "color_producto",
+        foreignKey: "color_id"
+        })}
     
-// Product.associate = function (models) {
-//     Product.belongsTo(models.opsys, { 
-//         as: "os",
-//         foreignKey: "os_id"
-//     })
-// }
+Product.associate = function (models) {
+    Product.belongsTo(models.Os, { 
+        as: "Opsys",
+        foreignKey: "os_id"
+    })
+}
 
 return Product
 };

@@ -30,7 +30,10 @@ module.exports = (sequelize, DataTypes) => {
         esAdmin: {
             type: DataTypes.STRING(5),
             },                                              
-            }
+            productoVenta_id: {
+                type: DataTypes.STRING(5),
+                },                                              
+                }    
 
             let config = {
                 timestamps: true,
@@ -42,9 +45,9 @@ module.exports = (sequelize, DataTypes) => {
 const User = sequelize.define(alias,cols,config);
 
 // User.associate = function (models) {
-//             User.hasMany(models.products, { 
-//                 as: "product",
-//                 foreignKey: "color_id"
+//             User.hasMany(models.Product, { 
+//                 as: "productos_usuario",
+//                 foreignKey: "product_id"
 //                 })}
                 return User
 

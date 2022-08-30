@@ -12,38 +12,26 @@ Sequelize = db.Sequelize;
 
 const Products = db.Product;
 
-// const Genres = db.Genre;
-// const Actors = db.Actor;
-
-const controller = {
+const productsController = {
+    
+    // 'detail': (req, res) => {
+    //     db.Product.findByPk(req.params.id,
+    //         {
+    //             include : ['marca']
+    //         })
+    //         .then(products => {
+    //             res.render('products.ejs', {products});
+    //         });
+    // },
+    
     'list': (req, res) => {
         db.Product.findAll()
-        .then(function(productos){
-            return res.render("products",{productos})
+        .then(function(products){
+            return res.render("products",{products})
         })
-   
+    
     },
-    'detail': (req, res) => {
-        db.Product.findByPk(req.params.id,
-            {
-                include : ['marca']
-            })
-            .then(products => {
-                res.render('products.ejs', {products});
-            });
-    },
-    'new': (req, res) => {
-        db.Product.findAll({
-            order : [
-                ['marca', 'DESC']
-            ],
-            limit: 10
-        })
-            .then(products => {
-                res.render('products', {products});
-            });
-    },
-    }
+    
     // 'recomended': (req, res) => {
     //     db.Product.findAll({
     //         include: ['marca'],
@@ -78,19 +66,19 @@ const controller = {
   // },
 
   // Create - Form to create
-//   agregarProductos: (req, res) => {
-//     res.render("agregarProductos");
-//   },
+  agregarProductos: (req, res) => {
+    res.render("agregarProductos");
+  },
 
-//   // Create -  Method to store
-//   store: (req, res) => {
-//     let product = req.body;
-//     product.imgIndex = req.file.filename;
-//     product.id = inventario.length + 1;
-//     inventario.push(product);
-//     fs.writeFileSync(productsFilePath, JSON.stringify(inventario), "utf-8");
-//     res.redirect("/products");
-//   },
+  // Create -  Method to store
+  store: (req, res) => {
+    let product = req.body;
+    product.imgIndex = req.file.filename;
+    product.id = inventario.length + 1;
+    inventario.push(product);
+    fs.writeFileSync(productsFilePath, JSON.stringify(inventario), "utf-8");
+    res.redirect("/products");
+  },}
 
 //   // Update - Form to edit
 //   editar: (req, res) => {
@@ -131,5 +119,5 @@ const controller = {
 //   },
 // };
 
-module.exports = controller;
+module.exports = productsController;
 // module.exports = productsFilePath;

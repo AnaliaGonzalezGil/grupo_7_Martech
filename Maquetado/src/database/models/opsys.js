@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
 const Os = sequelize.define(alias,cols);
 
 // Os.associate = function (models) {
-//             Os.hasMany(models.products, { 
-//                 as: "product",
-//                 foreignKey: "os_id"
+//             Os.hasMany(models.Product, { 
+//                 as: "producto_os",
+//                 foreignKey: "product_id"
 //                 })}
                 return Os
 

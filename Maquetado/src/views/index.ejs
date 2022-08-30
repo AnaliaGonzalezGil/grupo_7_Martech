@@ -38,9 +38,10 @@
         <div class="modelos-premium">
             
                 <h3>NUESTROS PREMIUM</h3>
-                <% for (let i=0; i<=4; i++){  %>
+                <% for (let i=0; i< products.length; i++) { %>
                     <article>
                         <div class="product" id="product">
+                            <h2><%= products[i].marca %></h2>                
                      <a href="/products/detalle/<%= products[i].id %>" >
                 
                         <img src= "../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
@@ -57,12 +58,15 @@
             <h3> MAS VENDIDOS</h3>
             <article>
                 <div class="product" id="product_1">
+                    <% for (let i=0; i< marcas.length; i++) { %>
+                    <h2><%= products[i].marca %></h2>        
                     <a href="/products/detalle/1">
                     <img src="./images/products/iphone-frente2.png" width="200" height="200" />
                     </a>
                     <h4>Vendido N° 1</h4>
                     <p>500 USD</p>
                 </div>
+                <% } %>
             </article>
            
             <article>
