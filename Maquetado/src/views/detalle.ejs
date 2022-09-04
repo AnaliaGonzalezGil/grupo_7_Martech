@@ -13,30 +13,30 @@
             
                 <div class="breakpoint">
                     <div class="centrar-producto">
-                        <img src="/images/products/<%= product.imgIndex %>" class= "zoom" alt="Celular frente">
+                        <img src="/images/products/<%= products.imgIndex %>" class= "zoom" alt="Celular frente">
                      </div>
                     <!-- <div class="centrar-producto">
-                         <img src="/images/products/<%= product.img2 %>"  class= "zoom" alt="Celular costado">
-                         <img src="/images/products/<%= product.img3%>" class= "zoom" alt="Celular atras">
+                         <img src="/images/products/<%= products.img2 %>"  class= "zoom" alt="Celular costado">
+                         <img src="/images/products/<%= products.img3%>" class= "zoom" alt="Celular atras">
                     </div> -->
                 <div>
                     <img src="/images/products/Hotsale.png" class="hotsale">
                 </div>
                     <div class="main-article-producto">
-                        <h3>Precio: USD <%= product.precioVenta %></h3>
+                        <h3>Precio: USD <%= products.precioVenta %></h3>
                         <ul>
                         <li>Empresa:Liberado </li>
                         <li>En Stock</li>
-                        <li>Condición:<%= product.estadoEquipo %></li>
+                        <li>Condición:<%= products.estadoEquipo %></li>
                         <p>Luce y funciona como nuevo. No tiene detalles de uso. Ni marcas en los bordes, ni en la pantalla, ni en la parte de atrás.</p>
-                        <li>Color: <%= product.color %></li>
+                        <li>Color: <%= products.color %></li>
                        
                     </div>
                 </div>
                 <div class="precio-DP">
                         <p>Precio en un pago</p>
-                        <h3> USD <%= product.precioVenta %></h3>
-                        <p>6 cuotas de <%= product.precioVenta /6 %> USD sin interés</p>  
+                        <h3> USD <%= products.precioVenta %></h3>
+                        <p>6 cuotas de <%= products.precioVenta /6 %> USD sin interés</p>  
                     </div>
                 
 
@@ -47,10 +47,10 @@
                         <form action="/Detalle_de_producto"  style="display:inline">
                             <button class= comprar-button-producto type="submit">Comprar </button>
                         </form>
-                        <form action="/products/editar/<%=product.id %>"  style="display:inline">
+                        <form action="/products/editar/<%=products.id %>"  style="display:inline">
                        <button class= comprar-button-producto type="submit">Editar </button></a>  
                         </form>
-                         <form action="/products/<%=product.id %>?_method=DELETE" method="POST" style="display:inline">
+                         <form action="/products/<%=products.id %>?_method=DELETE" method="POST" style="display:inline">
                         <button class= comprar-button-producto type="submit">Eliminar </button>
                         </form>
                     </div>
@@ -66,20 +66,20 @@
 
                 <div class="caracteristicas-producto">
                     <h3 class="margin-caracteristicas">Descripción</h3>
-                    <p> <%= product.descripcion %></p>
+                    <p> <%= products.descripcion %></p>
                 </div>
                 <div class="lista-caracteristicas-producto">
-                    <p><i class="fa-solid fa-mobile-screen"></i> Tamaño de pantalla: <%= product.resolucion %> "</p>
-                    <p><i class="fa-solid fa-camera-retro"></i>Cámara principal:<%= product.camara %> Mpx</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i> Tamaño de pantalla: <%= products.resolucion %> "</p>
+                    <p><i class="fa-solid fa-camera-retro"></i>Cámara principal:<%= products.camara %> Mpx</p>
                     <p><i class="fa-solid fa-maximize"></i>Dimensiones Perfil: 7.7 mm</p>
-                    <p><i class="fa-solid fa-sim-card"></i>Dual SIM: <%= product.dualSim %></p>
+                    <p><i class="fa-solid fa-sim-card"></i>Dual SIM: <%= products.dualSim %></p>
                 
                 </div>
                 <div class="lista-caracteristicas-producto" >
-                        <p><i class="fa-solid fa-microchip"></i>Memoria RAM: <%= product.memoriaRam %>GB</p>
-                        <p><i class="fa-solid fa-mobile-screen-button"></i>Sistema Operativo:<%= product.os %></p>
-                        <p><i class="fa-solid fa-satellite-dish"></i>Señal:<%= product.senal %>G</p>
-                        <p ><i class="fa-solid fa-server"></i>Memoria Interna:<%= product.memoriaInterna %>GB</p>
+                        <p><i class="fa-solid fa-microchip"></i>Memoria RAM: <%= products.memoriaRam %>GB</p>
+                        <p><i class="fa-solid fa-mobile-screen-button"></i>Sistema Operativo:<%= products.os %></p>
+                        <p><i class="fa-solid fa-satellite-dish"></i>Señal:<%= products.senal %>G</p>
+                        <p ><i class="fa-solid fa-server"></i>Memoria Interna:<%= products.memoriaInterna %>GB</p>
                 </div>
               </article>
              

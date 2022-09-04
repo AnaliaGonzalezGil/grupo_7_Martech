@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     let alias = "Users";
     let cols = {
         id: {
-            type: DataTypes.BIGINT(6).UNSIGNED,
+            type: DataTypes.SMALLINT(6).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -30,9 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         esAdmin: {
             type: DataTypes.STRING(5),
             },                                              
-            productoVenta_id: {
-                type: DataTypes.STRING(5),
-                },                                              
+                                         
                 }    
 
             let config = {
@@ -47,7 +45,7 @@ const User = sequelize.define(alias,cols,config);
 // User.associate = function (models) {
 //             User.hasMany(models.Product, { 
 //                 as: "productos_usuario",
-//                 foreignKey: "product_id"
+//                 foreignKey: "id_product"
 //                 })}
                 return User
 

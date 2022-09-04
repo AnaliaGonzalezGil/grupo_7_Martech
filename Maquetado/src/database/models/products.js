@@ -1,83 +1,77 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
 
     let alias = "Product";
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: DataTypes.SMALLINT(6).UNSIGNED,
+            autoIncrement: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: true,
+            
         },
-        marca: {
-            type: dataTypes.STRING(100),
-            allowNull: false
+        id_marca: {
+            type: DataTypes.SMALLINT(100),
+            allowNull: true,
         },
         nombreProducto: {
-            type: dataTypes.STRING(100),
-            allowNull: false
+            type: DataTypes.STRING(100),
+            allowNull: true,
         },
         imgIndex: {
-            type: dataTypes.STRING(250),
-            allowNull: false
+            type: DataTypes.STRING(250),
+            allowNull: true,
         },
-        color_id: {
-            type: dataTypes.BIGINT(6),
+        id_color: {
+            type: DataTypes.SMALLINT(6),
+            allowNull: true
         },
-        categoy: {
-            type: dataTypes.STRING(100),
-            allowNull: false
+        category: {
+            type: DataTypes.STRING(100),
+            allowNull: true,
         },
         descripcion: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        condicion: {
-            type: dataTypes.STRING(100),
-            allowNull: false
+            type: DataTypes.STRING(100),
+            allowNull: true,
         },
         precioVenta: {
-            type: dataTypes.BIGINT(6),
-            allowNull: false
+            type: DataTypes.SMALLINT(6),
+            allowNull: true,
         },
         oferta: {
-            type: dataTypes.STRING(5),
-            allowNull: false
+            type: DataTypes.STRING(5),
+            allowNull: true,
         },
         descuento: {
-            type: dataTypes.DECIMAL(2,2),
-            allowNull: false
+            type: DataTypes.DECIMAL(2,2),
+            allowNull: true,
         },
         estadoEquipo: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        marca_id: {
-            type: dataTypes.SMALLINT(6),
-            allowNull: false
+            type: DataTypes.STRING(100),
+            allowNull: true,
         },
         resolucion: {
-            type: dataTypes.DECIMAL(2,2),
-            allowNull: false
+            type: DataTypes.DECIMAL(2,2),
+            allowNull: true,
         },
         memoriaRam: {
-            type: dataTypes.BIGINT(6),
-            allowNull: false
+            type: DataTypes.SMALLINT(6),
+            allowNull: true,
         },
         memoriaInterna: {
-            type: dataTypes.BIGINT(6),
-            allowNull: false
+            type: DataTypes.SMALLINT(6),
+            allowNull: true,
         },
         dualSim: {
-            type: dataTypes.STRING(5),
-            allowNull: false
+            type: DataTypes.STRING(5),
+            allowNull: true,
         },
-        os_id: {
-            type: dataTypes.BIGINT(6),
-            allowNull: false
+        id_os: {
+            type: DataTypes.SMALLINT(6),
+            allowNull: true,
         },
         senal: {
-            type: dataTypes.STRING(10),
-            allowNull: false
+            type: DataTypes.STRING(10),
+            allowNull: true,
         },
     };
 
@@ -97,19 +91,19 @@ const Product = sequelize.define(alias,cols,config)
 Product.associate = function (models) {
     Product.belongsTo(models.Marca, { 
         as: "marca",
-        foreignKey: "marca_id"
+        foreignKey: "id_marca"
     })}
 
 Product.associate = function (models) {
     Product.belongsTo(models.Color, { 
         as: "color_producto",
-        foreignKey: "color_id"
+        foreignKey: "id_color"
         })}
     
 Product.associate = function (models) {
     Product.belongsTo(models.Os, { 
-        as: "Opsys",
-        foreignKey: "os_id"
+        as: "opsys",
+        foreignKey: "id_os"
     })
 }
 

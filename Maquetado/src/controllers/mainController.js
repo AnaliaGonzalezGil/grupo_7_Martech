@@ -11,16 +11,16 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
   'premium': (req, res) => {
-  //   db.Product.findAll({
-  //      order : [
-  //           ['precioVenta', 'DESC']
-  //       ],
-  //     })
+    db.Product.findAll({
+       order : [
+            ['precioVenta', 'DESC']
+        ],
+      })
  
-  //  .then(function(products) {
-            // return res.render('index',{products} );
-  //           return res.send(products)
-  //       });
+   .then(function(products) {
+            return res.render('index',{products} );
+            
+        });
 let promesas = [
   db.Marca.findAll({
     // order: [
@@ -41,7 +41,7 @@ Promise.all(promesas)
 
 },
   index: function (req, res) {
-    let products = inventario;
+    let products = inventario; //CAMBIAR POR LA BASE DE DATOS
     res.render("index", { products });
   },
   carrito: function (req, res) {

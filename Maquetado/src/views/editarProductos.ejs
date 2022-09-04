@@ -6,33 +6,67 @@
   <body>
      <main>
         <div class="caja-page-principal">
-            <form class="page-forms" action="/products?_method=PUT" method="POST" >
+            <form class="page-forms" action="/products/editar/<%= Product.id %>?_method=PUT" method="POST" >
 
             <h4 class="mainTitle-page">Edita tu producto</h4>
             <div class="div-forms-principal">
                 <div class="div-forms">
                 <label class="label-forms" for="nombreProducto">Nombre del Producto</label>
-                <input class="input-forms" id="nombreProducto"  value="<%=productToEdit.nombreProducto%>" type="text" name="nombreProducto" />
+                <input class="input-forms" id="nombreProducto"  value="<%=Product.nombreProducto%>" type="text" name="nombreProducto" />
              </div>
 
               <div class="div-forms">
                 <label class="label-forms" for="precioVenta">Precio de venta</label>
-                <input class="input-forms" id="precioVenta"  value="<%=productToEdit.precioVenta%>" name="precioVenta" />
+                <input class="input-forms" id="precioVenta"  value="<%=Product.precioVenta%>" name="precioVenta" />
             </div>
 
              <div class="div-forms">
                 <label class="label-forms" for="estadoEquipo">Estado del Equipo</label>
-                <input class="input-forms"id="estadoEquipo" value="<%=productToEdit.estadoEquipo%>" type="text" name="estadoEquipo" />
+                <input class="input-forms"id="estadoEquipo" value="<%=Product.estadoEquipo%>" type="text" name="estadoEquipo" />
             </div>
 
-              <div class="div-forms">
-                <label class="label-forms" for="marca">Marca</label>
-                <input class="input-forms" id="marca"  type="text" value="<%=productToEdit.marca%>" name="marca" />
-             </div>
+            <div class="div-forms">
+              <label class="label-forms" for="marca">Marca</label>
+              <select name="id_marca" id="id_marca">
+                <option value="1"> Apple</option>
+                <option value="2"> Samsung</option>
+                <option value="3"> Motorola</option>
+                <option value="4"> Huawei</option>
+                <option value="5"> Tesla</option>
+                <option value="6"> Lg</option>
+                <option value="7"> Xiaomi</option> 
+                </select>
+                <label class="label-forms" for="Os">OS</label>
+                <select name="id_os" id="id_os">
+                  <option value="1"> ios</option>
+                  <option value="2"> Android</option>
+                  <option value="3"> Windows OS</option>
+                  <option value="4"> Tesla OS</option>
+                  <option value="5"> Mi UI</option>
+                  </select>
+              <label class="label-forms" for="color">Color</label>
+              <select name="id_color" id="id_color">
+                <option value="1"> Gris</option>
+                <option value="2"> Negro</option>
+                <option value="3"> Blanco</option>
+                <option value="4"> Dorado</option>
+                <option value="5"> Azul</option>
+                <option value="6"> Rosa</option>
+                <option value="7"> Rojo</option> 
+                <option value="8"> Plateado</option> 
+                <option value="8"> Celeste</option> 
+                <option value="10"> Violeta</option> 
+                <option value="11"> Verde</option> 
+                <option value="12"> Amarillo</option> 
+                <option value="13"> Bordo</option> 
+                <option value="14"> Azul tornasolado</option> 
+                <option value="15"> Beige</option> 
+                </select>
+           </div>
 
             <div class="div-forms">
                 <label class="label-forms" for="memoriaRam">Memoria Ram</label>
-                <input class="input-forms" id="memoriaRam" value="<%=productToEdit.memoriaRam%>" type="text" name="memoriaRam" />
+                <input class="input-forms" id="memoriaRam" value="<%=Product.memoriaRam%>" type="text" name="memoriaRam" />
             </div>
              
             <div class="button-forms-register">

@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Color";
+    let alias = "Os";
     let cols = {
         id: {
-            type: DataTypes.BIGINT(6).UNSIGNED,
+            type: DataTypes.SMALLINT(6).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
             },
             }
 
-const Color = sequelize.define(alias,cols);
+const Os = sequelize.define(alias,cols);
 
-// Color.associate = function (models) {
-//             Color.hasMany(models.Product, { 
-//                 as: "product_color",
-//                 foreignKey: "product_id"
+// Os.associate = function (models) {
+//             Os.hasMany(models.Product, { 
+//                 as: "producto_os",
+//                 foreignKey: "id_product"
 //                 })}
-                return Color
+                return Os
 
         }
