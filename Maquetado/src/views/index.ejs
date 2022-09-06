@@ -38,10 +38,10 @@
         <div class="modelos-premium">
             
                 <h3>NUESTROS PREMIUM</h3>
-                <% for (let i=0; i< products.length; i++) { %>
+                <% for (let i=0; i<  5; i++) { %>
                     <article>
                         <div class="product" id="product">
-                            <h2><%= products[i].marca %></h2>                
+                            <h2><%= marcas[i].id %></h2>                
                      <a href="/products/detalle/<%= products[i].id %>" >
                 
                         <img src= "../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
@@ -55,21 +55,21 @@
     
 
         <div class="mas-vendidos">
-            <h3> MAS VENDIDOS</h3>
+            <h3> ÚLTIMOS INGRESOS</h3>
+             <% for (let i=0; i< 5; i++) { %>
             <article>
-                <div class="product" id="product_1">
-                    <% for (let i=0; i< products.length; i++) { %>
-                    <h2><%= products[i].marca %></h2>        
-                    <a href="/products/detalle/1">
-                    <img src="./images/products/iphone-frente2.png" width="200" height="200" />
+                <div class="product" id="product">
+                    <h2><%= marcas[i].nombre %></h2>        
+                    <a href="/products/detalle/<%= products[i].nombreProducto %>">
+                    <img src="../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
                     </a>
-                    <h4>Vendido N° 1</h4>
-                    <p>500 USD</p>
+                    <h4><%= products[i].nombreProducto %> </h4>
+                    <p> <%= products[i].precioVenta %> USD </p>
                 </div>
-                <% } %>
+              
             </article>
-           
-            <article>
+             <% } %>
+            <!-- <article>
                 <div class="product" id="product_5">
                     <a href="/products/detalle/5">
                     <img src="./images/products/Samsung-S22rosa.png" width="200" height="200" />
@@ -80,7 +80,7 @@
             </article>
         </div>
     
-    </main>
+    </main> -->
 
 <%- include('./partials/footer') %>
 

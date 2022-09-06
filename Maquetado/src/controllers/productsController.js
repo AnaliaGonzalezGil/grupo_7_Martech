@@ -21,9 +21,11 @@ const productsController = {
             });
     },
     'list': (req, res) => {
+        db.Marca.findAll()
         db.Product.findAll()
-        .then(function(products){
-            return res.render("products",{products})
+        .then(function(products, marcas)
+        {
+            return res.render("products",{products,marcas})
         })
     
     },
@@ -53,7 +55,7 @@ const productsController = {
     }
   )
     .then((respuesta)=> {
-      return res.redirect("products")})
+      return res.redirect("/")})
       .catch(error => res.send(error))
   },
   edit: function(req,res) {
@@ -63,16 +65,12 @@ const productsController = {
     Promise
     .all([promProducts])
     .then(([Product]) => {
-        //Movie.release_date = moment( new Date(Movie.release_date)).toLocaleDateString();
-        // Product.release_date = moment(Movie.release_date).locale('es-us').format('YYYY-MM-DD');
-        //new Date("Sun Jan 03 1999 21:00:00 GMT-0300 (hora estándar de Argentina)").toLocaleDateString()
-        //return res.send(Movie.release_date);
+
         return res.render(path.resolve(__dirname, '..', 'views',  'editarProductos'), {Product})})
     .catch(error => res.send(error))
 },
 update: function (req,res) {
-    // let productsId = req.params.id;
-    Promise
+    let productsId = req.params.id;
     Products
     .update(
         {
@@ -84,42 +82,26 @@ update: function (req,res) {
           estadoEquipo : req.body.estadoEquipo,
           memoriaRam : req.body.memoriaRam
         },
-        // {
-        //     where: {id: productsId}
-        // })
-    )
+        {
+            where: {id: productsId}
+        })
+    
     .then(()=> {
-        return res.redirect('/index')})            
+        return res.redirect('/')})            
     .catch(error => res.send(error))
 },
+destroy: function (req,res) {
+  let productsId = req.params.id;
+    Products
+  .destroy({where: {id: productsId}, force: true}) // force: true es para asegurar que se ejecute la acción
+  .then(()=>{
+      return res.redirect('/')})
+  .catch(error => res.send(error)) 
+}
 }
 
-//   // Update - Form to edit
-//   editar: (req, res) => {
-//     let id = req.params.id;
-//     globalThis.productToEdit = null;
-//     for (let i = 0; i < inventario.length; i++) {
-//       if (inventario[i].id == id) {
-//         productToEdit = inventario[i];
-//       }
-//     }
-//     res.render("editarProductos", { productToEdit });
-//   },
-//   // Update - Method to update
-//   update: (req, res) => {
-//     let id = productToEdit.id;
-//     for (let i = 0; i < inventario.length; i++) {
-//       if (inventario[i].id == id) {
-//         inventario[i].nombreProducto = req.body.nombreProducto;
-//         inventario[i].precioVenta = req.body.precioVenta;
-//         inventario[i].marca = req.body.marca;
-//         inventario[i].estadoEquipo = req.body.estadoEquipo;
-//         inventario[i].memoriaRam = req.body.memoriaRam;
-//       }
-//     }
-//     fs.writeFileSync(productsFilePath, JSON.stringify(inventario), "utf-8");
-//     res.redirect("/products/");
-//   },
+
+
 
 //   // Delete - Delete one product from DB
 //   destroy: (req, res) => {
