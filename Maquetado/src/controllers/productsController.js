@@ -86,7 +86,7 @@ update: function (req,res) {
             where: {id: productsId}
         })
     
-    .then(()=> {
+    .then(()=> {  
         return res.redirect('/')})            
     .catch(error => res.send(error))
 },

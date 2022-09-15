@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     
-    let alias = "Users";
+    let alias = "User";
     let cols = {
         id: {
             type: DataTypes.SMALLINT(6).UNSIGNED,
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             },    
         email: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING(250),
             allowNull: false,
                 },    
         contrasenia: {
@@ -40,13 +40,16 @@ module.exports = (sequelize, DataTypes) => {
                 deletedAt: false
             }
 
-const User = sequelize.define(alias,cols,config);
+    const User = sequelize.define(alias,cols,config);
 
 // User.associate = function (models) {
 //             User.hasMany(models.Product, { 
 //                 as: "productos_usuario",
 //                 foreignKey: "id_product"
 //                 })}
-                return User
+    return User
 
-        }
+}
+
+
+        

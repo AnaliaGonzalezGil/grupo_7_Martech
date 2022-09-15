@@ -3,21 +3,24 @@
   <link rel="stylesheet" href="css/styles_login_register.css">
   <%- include('./partials/head') %>
   <%- include('./partials/header') %>
-    <main>
+  <body>
+    <script src="js/formValidation.js"></script>
+  <main>
+
         <div class="caja-page-principal">
-        <form class="page-forms" method = "POST" action="/register" enctype="multipart/form-data">
+        <form class="page-forms" method = "POST" action="/register" enctype="multipart/form-data" >
           <h4 class="mainTitle-page">¡Crea tu cuenta!</h4>
           <div class="div-forms-principal">
             <div class="div-forms">
               <label class="label-forms" for="nombre">Nombre</label>
-              <input class="input-forms" type="text" name="nombre" value="<%= locals.old && old.nombre %>">
+              <input class="input-forms" type="text" minlength="2" maxlength="40" name="nombre" value="<%= locals.old && old.nombre %>">
                             <%if (locals.errors && errors.nombre) { %>
                <p style="color:white ; font-weight: 1;"> <%= errors.nombre.msg %></p>
                 <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="apellido">Apellido</label>
-              <input class="input-forms" type="text" name="apellido" value="<%= locals.old && old.apellido %>">
+              <input class="input-forms" type="text" minlength="2" maxlength="40" name="apellido" value="<%= locals.old && old.apellido %>">
               
               <%if (locals.errors && errors.apellido) { %>
                 <p style="color:white ; font-weight: 1;"> <%= errors.apellido.msg %></p>
@@ -34,7 +37,7 @@
               <label class="label-forms" for="password"
                 >Ingresa una contraseña</label
               >
-              <input class="input-forms" type="password" name="password" />
+              <input class="input-forms" minlength="8" maxlength="40" type="password" name="password" id="claveRegistro" />
               <%if (locals.errors && errors.password) { %>
                 <p style="color:white ; font-weight: 1;"> <%= errors.password.msg %></p>
                 <% } %>
@@ -43,7 +46,7 @@
           </button>
           <div class="div-forms">
           <label class="label-forms" for="imagendePerfil">Ingresá tu imagen de Perfil</label>
-          <input class="input-forms" type="file" name="imagendePerfil" id="imagendePerfil" />
+          <input class="input-forms" type="file" name="imagenPerfil" id="imagenPerfil" />
         </div>
         <div class="div-terminos-condiciones">
           <input type= "checkbox" name = "vendedor?">
@@ -64,6 +67,6 @@
     </main>
     <%- include('./partials/footer') %>
 
- 
+  
   </body>
 </html>

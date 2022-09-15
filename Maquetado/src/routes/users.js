@@ -9,6 +9,7 @@ const validations = require("../middlewares/validations");
 const recuerdameMiddleware = require("../middlewares/recordarUsuario");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const nombreFile = require("../middlewares/nombreFile");
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/images/users"));
@@ -21,12 +22,13 @@ const storage = multer.diskStorage({
     cb(null, filex);
   },
 });
+
 const upload = multer({ storage });
 
 
-router.get("/check", usersController.check);
-router.get("/register",guestMiddleware, usersController.register);
-router.post("/register", upload.single("imagendePerfil"),validations, usersController.store);
+// router.get("/check", usersController.check);
+router.get("/register",guestMiddleware, usersController.agregarUsuario);
+router.post("/register", upload.single("imagenPerfil"),validations, usersController.store);
 
 router.get("/login",guestMiddleware, usersController.login);
 router.post("/login", recuerdameMiddleware, usersController.procesoLogin);
