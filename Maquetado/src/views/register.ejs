@@ -4,7 +4,7 @@
   <%- include('./partials/head') %>
   <%- include('./partials/header') %>
   <body>
-    <script src="js/formValidation.js"></script>
+    <script src="/js/formValidation.js"></script>
   <main>
 
         <div class="caja-page-principal">
@@ -37,17 +37,20 @@
               <label class="label-forms" for="password"
                 >Ingresa una contraseña</label
               >
-              <input class="input-forms" minlength="8" maxlength="40" type="password" name="password" id="claveRegistro" />
+              <input class="input-forms" minlength="8" maxlength="40" type="password" name="password" id="claveRegistro" onchange="return validatePassword(this)"/>
               <%if (locals.errors && errors.password) { %>
                 <p style="color:white ; font-weight: 1;"> <%= errors.password.msg %></p>
                 <% } %>
+                <span id="campoOK"></span>
             </div>
              </div>
           </button>
           <div class="div-forms">
           <label class="label-forms" for="imagendePerfil">Ingresá tu imagen de Perfil</label>
-          <input class="input-forms" type="file" name="imagenPerfil" id="imagenPerfil" />
+          <input class="input-forms" type="file" name="imagenPerfil" id="imagenPerfil" onchange="return validarExt()" />
         </div>
+        <div id="visorArchivo">
+			</div>
         <div class="div-terminos-condiciones">
           <input type= "checkbox" name = "vendedor?">
           <label class="checkbox" for="vendedor?">¡También quiero vender! </label>
@@ -64,6 +67,7 @@
           <a class= "link-login-register" href= "login">  ¿Ya tienes cuenta? </a>
         </form>
       </div>
+      <script src="/js/formValidation.js"></script> 
     </main>
     <%- include('./partials/footer') %>
 
