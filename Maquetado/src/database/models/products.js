@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         descripcion: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING(250),
             allowNull: true,
         },
         precioVenta: {

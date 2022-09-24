@@ -33,7 +33,7 @@ const nombreFile = {
          return Promise.all([todosUsuarios])
             .then(([allUsuarios]) =>{
                 const userFound = allUsuarios.find(oneUser => oneUser[field] === text);
-                return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en el json//
+                return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en la base//
             }).catch( err => {
                 throw new Error(err)
             })
