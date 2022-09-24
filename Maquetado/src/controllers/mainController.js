@@ -37,8 +37,8 @@ let promesas = [
       })
 ]
 Promise.all(promesas)
-    .then(function([marcas,products]){ // si queremos meterle otra promesa, va post marcas con ,
-      res.render("index", { products,marcas })
+    .then(function([marca,products]){ // si queremos meterle otra promesa, va post marcas con ,
+      res.render("index", {marca, products })
     })
 
 },

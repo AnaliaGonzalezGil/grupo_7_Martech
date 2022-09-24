@@ -12,8 +12,15 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             },
             }
+    let config = {
+                tableName:"color",
+                timestamps: true,
+                createdAt: 'created_at',
+                updatedAt: 'updated_At',
+                deletedAt: false
+            }
 
-const Color = sequelize.define(alias,cols);
+const Color = sequelize.define(alias,cols,config);
 
 // Color.associate = function (models) {
 //             Color.hasMany(models.Product, { 

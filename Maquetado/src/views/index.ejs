@@ -41,9 +41,9 @@
                 <% for (let i=0; i<  5; i++) { %>
                     <article>
                         <div class="product" id="product">
-                            <h2><%= marcas[i].id %></h2>                
-                     <a href="/products/detalle/<%= products[i].id %>" >
-                
+                            <h2><%= marca[i].id %></h2>                
+                     <a href="/products/detalle/<%= products[i].id %>">
+                        
                         <img src= "../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
                      </a>
                      <h4><%= products[i].nombreProducto %> </h4>
@@ -59,7 +59,7 @@
              <% for (let i=0; i< 5; i++) { %>
             <article>
                 <div class="product" id="product">
-                    <h2><%= marcas[[i]].nombre %></h2>        
+                    <h2><%= marca[[i]].nombre %></h2>        
                     <a href="/products/detalle/<%= products[i].nombreProducto %>">
                     <img src="../images/products/<%= products[i].imgIndex %>" width="200" height="200" />
                     </a>

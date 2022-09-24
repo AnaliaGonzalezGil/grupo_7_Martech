@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             },
             }
-let config = {
-                tableName:"marcas",
-                timestamps: true,
-                createdAt: 'created_at',
-                updatedAt: 'updated_at',
-                deletedAt: false
-            }
+    let config = {
+        tableName:"marca",
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_At',
+        deletedAt: false
+    }
 const Marca = sequelize.define(alias,cols,config);
 
 Marca.associate = function (models) {
