@@ -17,11 +17,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             },    
         email: {
-            type: DataTypes.STRING(250),
+            type: DataTypes.TEXT,
             allowNull: false,
                 },    
         contrasenia: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING(250),
             allowNull: false,
             },    
         imagenPerfil: {

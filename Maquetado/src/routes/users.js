@@ -31,10 +31,10 @@ router.get("/register",guestMiddleware, usersController.agregarUsuario);
 router.post("/register", upload.single("imagenPerfil"),validations, usersController.store);
 
 router.get("/login",guestMiddleware, usersController.login);
-router.post("/login", usersController.procesoLogin);
+router.post("/login",usersController.logearse);
 
 
-// router.get("/profile/:userID", usersController.profile);
+router.get("/usuarios", usersController.profile);
 
 
 module.exports = router;

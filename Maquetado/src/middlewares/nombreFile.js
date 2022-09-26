@@ -14,24 +14,25 @@ const fs = require("fs");
 const Usuarios = db.User
 
 const nombreFile = {
-     getData: function(){
-        return this.fileName
-    }, //trae todo el Json para despues leerlo y ver si existe usuario-clave o cualquier campo que querramos//
+    //  getData: function(){
+    //     return this.fileName
+    // }, //trae todo el Json para despues leerlo y ver si existe usuario-clave o cualquier campo que querramos//
     findAll: function() {
-        return Usuarios.getData(); //trae todo getData//
+        return Usuarios.findAll(); //trae todo getData//
     },
     findByPk: function(email) {
-        let allUsers = usuarios.findAll();
+        let allUsers = Usuarios.findAll();
         Promise
         .all([todosUsuarios])
         .then(([allUsers]) =>{
-            allUsers.find(oneUser => oneUser.email === email);
+        let userFound = allUsers.find(oneUser => oneUser.email === email);
         return userFound; //trae toda la info encontrada si coincide ID puesto con ID del Json//
     })},
     findByField: function(field,text) {
         const todosUsuarios = db.User.findAll({raw:true});
-         return Promise.all([todosUsuarios])
-            .then(([allUsuarios]) =>{
+         return Promise
+         .all([todosUsuarios])
+         .then(([allUsuarios]) =>{
                 const userFound = allUsuarios.find(oneUser => oneUser[field] === text);
                 return userFound; //compara el valor puesto en texto (como puede ser mail para logearse contra el campo email encontrado en la base//
             }).catch( err => {

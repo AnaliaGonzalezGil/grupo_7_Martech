@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado de pelis'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+	<!-- todos los productos -->
+
+<main>
+	 <div class="modelos-premium">
+		
+		
+			<h3>Todos los productos</h3>
+		
+			<% for (let i=0; i< users.length; i++) { %>
+			<article>
+			<div class="product" id="product">
+				<a href="/users/detalle/<%= users[i].id %>">
+							 
+				</a>
+								<h2> <%= users[i].firstName %></h2>
+								<span><%= users[i].contrasenia %></span>
+									<p><%= users[i].password %></p>
+							</div>	
+							</article>
+						
+						
+			
+
+		
+		    <% } %>
+		</div>
+	
+	<!-- /todos los productos -->
+</main>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	
+	<!-- /footer -->
+</body>	
+</html>
