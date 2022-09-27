@@ -107,24 +107,30 @@ const controller = {
             .catch(error => res.send(error));
           },
         
-    logearse: (req,res)=>{
-                
-              let userToLogin =  nombrefile.findByField("email",req.body.email);
-                if (userToLogin){
-                let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.contrasenia);
-                if (passwordOK) {            
-                    return res.redirect("/");
-                }
-            }
- 
-                            return res.render("login",{ 
-                            errors: {
-                                email: {
-                                    msg: "Credenciales Inválidas"
-                                    
-                                }}
-                            },
-                            )}
+    logearse: async (req,res)=>{
+              try {
+                let userToLogin =  await nombrefile.findByField("email",req.body.email);
+                console.log(userToLogin)
+                  if (userToLogin){
+                  let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.contrasenia);
+                  if (passwordOK) {            
+                      return res.redirect("/");
+                  }
+              }
+   
+                              return res.render("login",{ 
+                              errors: {
+                                  email: {
+                                      msg: "Credenciales Inválidas"
+                                      
+                                  }}
+                              },
+                              )
+              } catch (error) {
+                console.log(error)
+              }  
+          
+                        }
                     }
                         
        

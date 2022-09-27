@@ -18,6 +18,9 @@
             <div class="div-forms">
               <label class="label-forms" for="password">Contraseña</label>
               <input class="input-forms" type="password" name="password" />
+              <%if (locals.errors && errors.contrasenia) { %>
+                <p style="color:white ; font-weight: 1;"> <%= errors.contrasenia.msg %></p>
+                 <% } %>
             </div>
 
            <div class="div-terminos-condiciones">

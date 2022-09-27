@@ -31,7 +31,7 @@ router.get("/register",guestMiddleware, usersController.agregarUsuario);
 router.post("/register", upload.single("imagenPerfil"),validations, usersController.store);
 
 router.get("/login",guestMiddleware, usersController.login);
-router.post("/login",usersController.logearse);
+router.post("/login", usersController.logearse);
 
 
 router.get("/usuarios", usersController.profile);
