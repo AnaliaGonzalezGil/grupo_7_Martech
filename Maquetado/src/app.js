@@ -15,6 +15,7 @@ const guestMiddleware = require("./middlewares/guestMiddleware")
 const { cookie } = require("express-validator");
 const { parse } = require("path");
 const userlogged = require("./middlewares/userLoggedMiddleware");
+const apiUsersRoutes = require("./routes/api/usersApiRouter");
 
 /** apps -use */
 // app.use(recordarUsuario);
@@ -35,6 +36,7 @@ app.listen(3000, () => {
 app.use("/", mainRouter);
 app.use("/products", products);
 app.use("/", users);
+app.use("/api", apiUsersRoutes)
 
 const db = require("./database/models");
 db.sequelize.sync().then((req) => {
