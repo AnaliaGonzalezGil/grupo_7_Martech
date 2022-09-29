@@ -53,3 +53,27 @@
             }
             return false;
         } 
+
+        function ordernar
+        const mysql =require("mysql");
+        const { connect } = require("../../app");
+        const connection = mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "",
+            database: "martech_db2",
+            port: "3000"
+        
+        })
+        
+        connection.connect((err) =>{
+            if (err) throw err
+            console.log("la conexión funciona")
+        })
+        
+        connection.query('SELECT * FROM products', (err,rows)=>{
+            if (err) throw err
+            console.log("los datos son"+rows)
+        })
+        
+        connection.end()
