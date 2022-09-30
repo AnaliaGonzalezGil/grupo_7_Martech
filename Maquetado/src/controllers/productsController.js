@@ -51,7 +51,16 @@ const productsController = {
   nombreProducto : req.body.nombreProducto,
   precioVenta : req.body.precioVenta,
   estadoEquipo : req.body.estadoEquipo,
-  memoriaRam : req.body.memoriaRam
+  memoriaRam : req.body.memoriaRam,
+  descripcion: req.body.description,
+  oferta: req.body.oferta,
+  descuento: req.body.descuento,
+  resolucion: req.body.resolucion,
+  memoriaInterna: req.body.memoriaInterna,
+  dualSim: req.body.dualSim,
+  senal: req.body.senal,
+  category: "premium",
+
     }
   )
     .then((respuesta)=> {
@@ -74,13 +83,22 @@ update: function (req,res) {
     Products
     .update(
         {
-          id_marca : req.body.id_marca, 
+          id_marca : req.body.id_marca,
           id_color : req.body.id_color,
           id_os : req.body.id_os,
+          imgIndex : !!req.file ? req.file.filename : true,
           nombreProducto : req.body.nombreProducto,
           precioVenta : req.body.precioVenta,
           estadoEquipo : req.body.estadoEquipo,
-          memoriaRam : req.body.memoriaRam
+          memoriaRam : req.body.memoriaRam,
+          descripcion: req.body.description,
+          oferta: req.body.oferta,
+          descuento: req.body.descuento,
+          resolucion: req.body.resolucion,
+          memoriaInterna: req.body.memoriaInterna,
+          dualSim: req.body.dualSim,
+          senal: req.body.senal,
+          category: "premium",
         },
         {
             where: {id: productsId}
