@@ -11,23 +11,36 @@ const usersController = {
                 .then(users => {
             res.status(200).json({meta:{status:200,
                                         total: users.length,
-                                        url:'api/users'},
-                                  data: users})
+                                        url:'/api/users',},
+
+                                  data: {users: users.map(function(users){
+                                    return users.id  + "," + users.firstName + "," + users.lastName + "," + users.email  + "," + '/api/users/detalle/' + users.id
+                                 
+                                  }
+                                    )
+                                      },})
         })
 
     },
     detalle:(req, res)=>{
-        db.User.findByPk(req.params.id)
-                .then(users => {
-            res.status(200).json({meta:{status:200,
-                                        url:'api/users/detalle' + req.params.id},
-                                  data: users})
-        })
+        db.User.findByPk(req.params.id, 
+          {
+          attributes: {
+            exclude: ['contrasenia', 'esAdmin']
+                      }
+          })
+              .then(users => {   
+                  res.status(200).json({meta:{status:200,
+                                         url:'/api/users/detalle' + req.params.id},
+                                       users: users.imagenPerfil = '../../public/images/users/' + users.imagenPerfil,
+                                        data: users  
+                                      })
+                             });
+                          }
+                              
+        
 
-    },
-
-
-} 
+                            } ;
 
 
       module.exports = usersController;
