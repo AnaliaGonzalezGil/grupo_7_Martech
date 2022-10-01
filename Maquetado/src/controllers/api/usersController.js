@@ -32,8 +32,9 @@ const usersController = {
               .then(users => {   
                   res.status(200).json({meta:{status:200,
                                          url:'/api/users/detalle' + req.params.id},
-                                       users: users.imagenPerfil = '../../public/images/users/' + users.imagenPerfil,
-                                        data: users  
+                                       //users: users.imagenPerfil = '/images/users/' + users.imagenPerfil,
+                                        data:users.imagenPerfil = '/images/users/' + users.imagenPerfil,
+                                        data: users,
                                       })
                              });
                           }
