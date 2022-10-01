@@ -13,14 +13,14 @@
           <div class="div-forms-principal">
             <div class="div-forms">
               <label class="label-forms" for="nombre">Nombre</label>
-              <input class="input-forms" type="text" minlength="2" maxlength="40" name="nombre" value="<%= locals.old && old.nombre %>">
+              <input class="input-forms" type="text" minlength="2" maxlength="40" name="nombre" value="<%= locals.old && old.nombre %>"required>
                             <%if (locals.errors && errors.nombre) { %>
                <p style="color:white ; font-weight: 1;"> <%= errors.nombre.msg %></p>
                 <% } %>
             </div>
             <div class="div-forms">
               <label class="label-forms" for="apellido">Apellido</label>
-              <input class="input-forms" type="text" minlength="2" maxlength="40" name="apellido" value="<%= locals.old && old.apellido %>">
+              <input class="input-forms" type="text" minlength="2" maxlength="40" name="apellido" value="<%= locals.old && old.apellido %>" required>
               
               <%if (locals.errors && errors.apellido) { %>
                 <p style="color:white ; font-weight: 1;"> <%= errors.apellido.msg %></p>

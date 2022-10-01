@@ -124,8 +124,8 @@ p.nombres-header {
 }
 
 .div-forms {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

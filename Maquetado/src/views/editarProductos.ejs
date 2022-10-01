@@ -9,65 +9,108 @@
             <form class="page-forms" action="/products/editar/<%= Product.id %>?_method=PUT" method="POST" >
 
             <h4 class="mainTitle-page">Edita tu producto</h4>
-            <div class="div-forms-principal">
+           <div class="div-forms-principal">
                 <div class="div-forms">
                 <label class="label-forms" for="nombreProducto">Nombre del Producto</label>
-                <input class="input-forms" id="nombreProducto"  value="<%=Product.nombreProducto%>" type="text" name="nombreProducto" />
+                <input class="input-forms" id="nombreProducto" minlength="5" value="<%=Product.nombreProducto%>"   placeholder="Ej: IPhone 13" type="text" name="nombreProducto" required/>
              </div>
-
+             
               <div class="div-forms">
                 <label class="label-forms" for="precioVenta">Precio de venta</label>
-                <input class="input-forms" id="precioVenta"  value="<%=Product.precioVenta%>" name="precioVenta" />
+                <input class="input-forms" id="precioVenta"  placeholder="Ej:3000 $"type="number" value="<%=Product.precioVenta%>" name="precioVenta" required/>
             </div>
-
+            <div class="div-forms">
+             <label class="label-forms" for="oferta" type="text">Oferta</label>
+              <select name="oferta" id="oferta">
+                <option value="Si"> Si</option>
+                <option value="No"> No</option>
+                </select>  
+                <div class="div-forms">
+                  <label class="label-forms" for="descuento">Descuento en %</label>
+                  <input class="input-forms" id="descuento"  placeholder="Ej:5%" type="number" value="<%=Product.descuento%>"  name="descuento" min="5" max="99"  required/>
+              </div>
              <div class="div-forms">
                 <label class="label-forms" for="estadoEquipo">Estado del Equipo</label>
-                <input class="input-forms"id="estadoEquipo" value="<%=Product.estadoEquipo%>" type="text" name="estadoEquipo" />
-            </div>
-
-            <div class="div-forms">
-              <label class="label-forms" for="marca">Marca</label>
-              <select name="id_marca" id="id_marca">
-                <option value="1"> Apple</option>
-                <option value="2"> Samsung</option>
-                <option value="3"> Motorola</option>
-                <option value="4"> Huawei</option>
-                <option value="5"> Tesla</option>
-                <option value="6"> Lg</option>
-                <option value="7"> Xiaomi</option> 
+                 <select name="estadoEquipo" id="estadoEquipo">
+                  <option value="1"> Excelente</option>
+                  <option value="2"> Muy bueno</option>
+                <option value="3"> Bueno</option>
                 </select>
-                <label class="label-forms" for="Os">OS</label>
-                <select name="id_os" id="id_os">
-                  <option value="1"> ios</option>
-                  <option value="2"> Android</option>
-                  <option value="3"> Windows OS</option>
-                  <option value="4"> Tesla OS</option>
-                  <option value="5"> Mi UI</option>
+            </div>
+            <div class="div-forms">
+              <label class="label-forms" for="resolucion">Resolución (en pulgadas)</label>
+              <input type="number" name="price" min="5" step="0.01"  class="input-forms" id="resolucion" value="<%=Product.resolucion%>"   placeholder="Ej:5'"  name="resolucion" min="5" max="20"  required/>
+          </div>
+            <div class="div-forms">
+              <label class="label-forms" for="description">Descripcion del Equipo</label>
+              <input class="input-forms"id="description" placeholder="Ej: El nuevo XXX con pantalla ..." type="text" value="<%=Product.description%>"  name="description" required/>
+          </div>
+
+            <div class="div-forms-imagen">
+                <label class="label-forms" for="imagenPerfil">Subir Imagen del Producto</label>
+                <input class="input-forms-imagen" type="file" id="imagenPerfil" name="imagenPerfil"  value="<%=Product.imagenPerfil%>" onchange="return validarExt()" >
+              </div>
+                    <div id="visorArchivo"></div>
+                
+              <div class="div-forms">
+                <label class="label-forms"  value="<%=Product.id_marca%>"  for="marca">Marca</label>
+                <select name="id_marca" id="id_marca">
+                  <option value="1"> Apple</option>
+                  <option value="2"> Samsung</option>
+                  <option value="3"> Motorola</option>
+                  <option value="4"> Huawei</option>
+                  <option value="5"> Tesla</option>
+                  <option value="6"> Lg</option>
+                  <option value="7"> Xiaomi</option> 
                   </select>
-              <label class="label-forms" for="color">Color</label>
-              <select name="id_color" id="id_color">
-                <option value="1"> Gris</option>
-                <option value="2"> Negro</option>
-                <option value="3"> Blanco</option>
-                <option value="4"> Dorado</option>
-                <option value="5"> Azul</option>
-                <option value="6"> Rosa</option>
-                <option value="7"> Rojo</option> 
-                <option value="8"> Plateado</option> 
-                <option value="8"> Celeste</option> 
-                <option value="10"> Violeta</option> 
-                <option value="11"> Verde</option> 
-                <option value="12"> Amarillo</option> 
-                <option value="13"> Bordo</option> 
-                <option value="14"> Azul tornasolado</option> 
-                <option value="15"> Beige</option> 
-                </select>
-           </div>
+                  <label class="label-forms" value="<%=Product.id_os%>"  for="Os">OS</label>
+                  <select name="id_os" id="id_os">
+                    <option value="1"> ios</option>
+                    <option value="2"> Android</option>
+                    <option value="3"> Windows</option>
+                    <option value="4"> Tesla OS</option>
+                    <option value="5"> Mi UI</option>
+                    </select>
+                <label class="label-forms"  value="<%=Product.id_color%>"  for="color">Color</label>
+                <select name="id_color" id="id_color">
+                  <option value="1"> Gris</option>
+                  <option value="2"> Negro</option>
+                  <option value="3"> Blanco</option>
+                  <option value="4"> Dorado</option>
+                  <option value="5"> Azul</option>
+                  <option value="6"> Rosa</option>
+                  <option value="7"> Rojo</option> 
+                  <option value="8"> Plateado</option> 
+                  <option value="8"> Celeste</option> 
+                  <option value="10"> Violeta</option> 
+                  <option value="11"> Verde</option> 
+                  <option value="12"> Amarillo</option> 
+                  <option value="13"> Bordo</option> 
+                  <option value="14"> Azul tornasolado</option> 
+                  <option value="15"> Beige</option> 
+                  </select>
+             </div>
 
             <div class="div-forms">
-                <label class="label-forms" for="memoriaRam">Memoria Ram</label>
-                <input class="input-forms" id="memoriaRam" value="<%=Product.memoriaRam%>" type="text" name="memoriaRam" />
+                <label class="label-forms" value="<%=Product.memoriaRam%>"  for="memoriaRam">Memoria Ram (Gb)</label>
+                <input class="input-forms"  id="memoriaRam" placeholder="Ej: 14 GB" type="text" name="memoriaRam" />
             </div>
+            <div class="div-forms">
+              <label class="label-forms" value="<%=Product.memoriaInterna%>"  for="memoriaInterna">Memoria Interna (Gb)</label>
+              <input class="input-forms"   id="memoriaInterna" min="64" max="2048" placeholder="Ej: 128 GB" type="text" name="memoriaInterna" />
+          </div>
+          <div class="div-forms">
+            <label class="label-forms" value="<%=Product.dualSim%>"  for="dualSim">Dual Sim</label>
+             <select name="dualSim" id="dualSim">
+               <option value="1"> Si</option>
+               <option value="2"> No</option>
+               </select> 
+               <label class="label-forms" value="<%=Product.senal%>" for="senal">Conectividad</label>
+               <select name="senal" id="senal">
+                 <option value="1"> 4G</option>
+                 <option value="2"> 5G</option>
+                 </select> 
+       
              
             <div class="button-forms-register">
             <button class="button-forms-agregar" type="submit">

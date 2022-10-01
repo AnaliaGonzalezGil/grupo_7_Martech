@@ -27,7 +27,7 @@ router.get("/", productsController.list);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/agregar", productsController.agregarProductos);
-router.post("/", upload.single("productImage"), productsController.create);
+router.post("/", upload.single("imagenPerfil"), productsController.create);
 
 /*** GET ONE PRODUCT ***/
 router.get("/detalle/:id", productsController.detail);
