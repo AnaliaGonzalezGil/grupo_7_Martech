@@ -11,6 +11,7 @@ const sequelize = db.sequelize;
 const Sequelize = db.Sequelize;
 const usuarios = db.User;
 
+
 const app = require("../app.js");
 const { findByField } = require("../middlewares/nombreFile.js");
 
