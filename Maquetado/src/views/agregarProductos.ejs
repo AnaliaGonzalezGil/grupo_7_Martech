@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/styles_login_register.css">
     <link rel="stylesheet" href="/css/styles.css">
 <body>
+  <script src="/js/formValidation.js"></script>
     <main>
         <div class="caja-page-principal">
             <form class="page-forms" action="/products" method="POST" enctype="multipart/form-data" >
@@ -13,24 +14,46 @@
             <div class="div-forms-principal">
                 <div class="div-forms">
                 <label class="label-forms" for="nombreProducto">Nombre del Producto</label>
-                <input class="input-forms" id="nombreProducto"  placeholder="Ej: IPhone 13" type="text" name="nombreProducto" />
+                <input class="input-forms" id="nombreProducto" minlength="5"   placeholder="Ej: IPhone 13" type="text" name="nombreProducto" required/>
              </div>
-
+             
               <div class="div-forms">
                 <label class="label-forms" for="precioVenta">Precio de venta</label>
-                <input class="input-forms" id="precioVenta"  placeholder="Ej:3000"type="text" name="precioVenta" />
+                <input class="input-forms" id="precioVenta"  placeholder="Ej:3000 $"type="number" name="precioVenta" required/>
             </div>
-
+            <div class="div-forms">
+             <label class="label-forms" for="oferta" type="text">Oferta</label>
+              <select name="oferta" id="oferta">
+                <option value="Si"> Si</option>
+                <option value="No"> No</option>
+                </select>  
+                <div class="div-forms">
+                  <label class="label-forms" for="descuento">Descuento en %</label>
+                  <input class="input-forms" id="descuento"  placeholder="Ej:5%" type="number" name="descuento" min="5" max="99"  required/>
+              </div>
              <div class="div-forms">
                 <label class="label-forms" for="estadoEquipo">Estado del Equipo</label>
-                <input class="input-forms"id="estadoEquipo" placeholder="Ej: Excelente" type="text" name="estadoEquipo" />
+                 <select name="estadoEquipo" id="estadoEquipo">
+                  <option value="1"> Excelente</option>
+                  <option value="2"> Muy bueno</option>
+                <option value="3"> Bueno</option>
+                </select>
             </div>
+            <div class="div-forms">
+              <label class="label-forms" for="resolucion">Resolución (en pulgadas)</label>
+              <input type="number" name="price" min="5" step="0.01"  class="input-forms" id="resolucion"  placeholder="Ej:5'"  name="resolucion" min="5" max="20"  required/>
+          </div>
+            <div class="div-forms">
+              <label class="label-forms" for="description">Descripcion del Equipo</label>
+              <input class="input-forms"id="description" placeholder="Ej: El nuevo XXX con pantalla ..." type="text" name="description" required/>
+          </div>
 
             <div class="div-forms-imagen">
-                <label class="label-forms" for="productImage">Subir Imagen del Producto</label>
-                <input class="input-forms-imagen" type="file" id="productImage" name="productImage">
-            </div>
-
+                <label class="label-forms" for="imagenPerfil">Subir Imagen del Producto</label>
+                <input class="input-forms-imagen" type="file" id="imagenPerfil" name="imagenPerfil" onchange="return validarExt()" required>
+              </div>
+                    <div id="visorArchivo"></div>
+                
               <div class="div-forms">
                 <label class="label-forms" for="marca">Marca</label>
                 <select name="id_marca" id="id_marca">
@@ -71,10 +94,24 @@
              </div>
 
             <div class="div-forms">
-                <label class="label-forms" for="memoriaRam">Memoria Ram</label>
-                <input class="input-forms" id="memoriaRam" placeholder="Ej: 14" type="text" name="memoriaRam" />
+                <label class="label-forms" for="memoriaRam">Memoria Ram (Gb)</label>
+                <input class="input-forms" id="memoriaRam" placeholder="Ej: 14 GB" type="text" name="memoriaRam" />
             </div>
-             
+            <div class="div-forms">
+              <label class="label-forms" for="memoriaInterna">Memoria Interna (Gb)</label>
+              <input class="input-forms" id="memoriaInterna" min="64" max="2048" placeholder="Ej: 128 GB" type="text" name="memoriaInterna" />
+          </div>
+          <div class="div-forms">
+            <label class="label-forms" for="dualSim">Dual Sim</label>
+             <select name="dualSim" id="dualSim">
+               <option value="1"> Si</option>
+               <option value="2"> No</option>
+               </select> 
+               <label class="label-forms" for="dualSim">Conectividad</label>
+               <select name="senal" id="senal">
+                 <option value="1"> 4G</option>
+                 <option value="2"> 5G</option>
+                 </select> 
             <div class="button-forms-register">
             <button class="button-forms-agregar" type="submit">
             Agregar
