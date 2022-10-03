@@ -1,4 +1,3 @@
-
 const db = require("../../database/models");
 const sequelize = db.sequelize;
 const usuarios = db.User;
@@ -44,4 +43,6 @@ const usersController = {
                             } ;
 
 
+
       module.exports = usersController;
+
