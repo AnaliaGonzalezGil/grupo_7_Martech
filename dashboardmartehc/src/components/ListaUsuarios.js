@@ -1,26 +1,21 @@
 import React, {useState, useEffect } from "react";
+import fetch from "node-fetch";
 
+const url = "http://localhost:3000/api/users"
 
-function ListaUsuarios(){
-    const url = "http://localhost:3000/api/users"
-    const [usersTotales, setUsersTotales] = useState()
-    const fetchApi = async() => {
-      const response = await fetch(url)
-      const responseJson = await response.json()
-      setUsersTotales(responseJson)
-    } 
-    useEffect(()=>{
-      fetchApi()
-    },)
-    return(
-        <div>
-        <ul>       
-            {usersTotales.map((usuarios,index) =>{
-                return(
-                <li> {usuarios.firstName}</li>
-            )})}
-        </ul>
-        </div>
-)}
+export default function ListaUsuarios () {
+  const [users, setUsers] = useState([]);
+   useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((registrado)=>  mostrarNombre(registrado));
 
-export default ListaUsuarios;
+      const mostrarNombre = (registrado) =>{
+          console.log(registrado)
+          let  body= ""
+          for (let i = 0; i<registrado.lenght; i++){
+            body += <tr> ${registrado[i].users}</tr>
+          document.getElementById("registrado").innerHTML = body}}
+    }, []);
+    
+    }

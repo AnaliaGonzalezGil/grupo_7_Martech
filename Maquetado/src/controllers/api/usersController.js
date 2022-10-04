@@ -10,7 +10,9 @@ const usersController = {
                 .then(users => {
             res.status(200).json({meta:{status:200,
                                         total: users.length,
-                                        url:'/api/users',},
+                                        
+                                        url:'/api/users',
+                                        },
 
                                   data: {users: users.map(function(users){
                                     return users.id  + "," + users.firstName + "," + users.lastName + "," + users.email  + "," + '/api/users/detalle/' + users.id
@@ -32,7 +34,7 @@ const usersController = {
                   res.status(200).json({meta:{status:200,
                                          url:'/api/users/detalle' + req.params.id},
                                        //users: users.imagenPerfil = '/images/users/' + users.imagenPerfil,
-                                        data:users.imagenPerfil = '/images/users/' + users.imagenPerfil,
+                                        data: users.imagenPerfil = '/images/users/' + users.imagenPerfil,
                                         data: users,
                                       })
                              });

@@ -1,8 +1,11 @@
 import React from 'react';
 import imagenFondo from '../assets/images/stormtrooper.jpg' // ACÁ SE COMPLETA CON LA ÚLTIMA IMAGEN
+import ListaUsuarios from './ListaUsuarios';
+
 function ContentRowTop(){
     return(
         <React.Fragment>
+			<ListaUsuarios />
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
@@ -19,7 +22,7 @@ function ContentRowTop(){
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
 											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Productos totales</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">21</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
+											<div className="h5 mb-0 font-weight-bold text-gray-800" id="registrado">21</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-film fa-2x text-gray-300"></i>
