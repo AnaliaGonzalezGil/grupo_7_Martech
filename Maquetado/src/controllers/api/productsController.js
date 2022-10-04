@@ -1,33 +1,45 @@
 const db = require("../../database/models");
 const sequelize = db.sequelize;
 const productos = db.Product;
-const marca = db.marca;
+const marca = db.Marca;
 const colores= db.color;
 // const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
 const productsController = {
-    todos: (req,res) => {
-        db.Product.findAll()
-                .then(products => {
-                    return res.status(200).json({meta:{status:200,
-                                        count: products.length,
-                                        url:'/api/products'},
-                                    // countByCategory: {countByCategory: products.map(function(products){
-                                    //     return marca.length;
-                                    //                                                     })
-                                    //         },
-                    //                 countByCategory2: {countByCategory: products.id_marca.map((products) => products.reduce((a, v) => {  
-                    //                     (v === marca ? a + 1 : a), 0})
-                                      
-                    // )},
-                    // countByCategory3: {countByCategory: products.filter(products.nombreProducto)},
+    todos: async (req,res) => {
 
-                                    data: {products: products.map(function(products){
-                                    return products.id  + "," + products.nombreProducto + ","+ products.descripcion + "," +  '/api/products/detalle/' + products.id
-                                                                                    })
-                                        }}
-                                                )
-        })
+        try {
+
+            const consultaMarcas = await marca.findAll({include: 'products'});
+            const consultaProductos = await productos.findAll({include: 'Marca'});
+                
+            const countByCategory = {};
+
+            consultaMarcas.forEach(element => {
+                countByCategory[element.nombre] = element.products.length
+            });
+
+            res.send({
+                countByCategory,
+                products: consultaProductos
+            })
+            
+        } catch (error) {
+            console.log(error);
+            res.send(error)
+        }
+        // db.Product.findAll()
+        //         .then(products => {
+                    // return res.status(200).json({meta:{status:200,
+                    //                     count: products.length,
+                    //                     url:'/api/products'},
+
+                    //                 data: {products: products.map(function(products){
+                    //                 return products.id  + "," + products.nombreProducto + ","+ products.descripcion + "," +  '/api/products/detalle/' + products.id
+                    //                                                                 })
+                    //                     }}
+                    //                             )
+        // })
     },
     detalle:(req, res)=>{
         db.Product.findByPk(req.params.id, 
