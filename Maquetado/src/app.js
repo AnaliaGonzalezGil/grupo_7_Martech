@@ -18,6 +18,9 @@ const userlogged = require("./middlewares/userLoggedMiddleware");
 const apiUsersRoutes = require("./routes/api/usersApiRouter");
 const apiProductsRoutes = require("./routes/api/productsApiRouter");
 
+const cors = require("cors");
+
+
 /** apps -use */
 // app.use(recordarUsuario);
 app.use(express.urlencoded({ extended: false }));
@@ -30,16 +33,16 @@ app.use(session( {secret: "Mensaje Secreto"}));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(cors())
 app.listen(3000, () => {
-  console.log("Servidor Funcionando en puerto 3000");
-
-});
+  console.log("Servidor Funcionando");});
 
 app.use("/", mainRouter);
 app.use("/products", products);
 app.use("/", users);
-app.use("/api", apiUsersRoutes);
-app.use("/api", apiProductsRoutes);
+
+app.use("/api", apiUsersRoutes,apiProductsRoutes)
+
 
 
 const db = require("./database/models");
