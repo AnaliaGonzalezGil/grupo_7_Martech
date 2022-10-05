@@ -29,7 +29,8 @@ const productsController = {
                 ...el,
                 marca: [el.marca.nombre ? el.marca.nombre : ''],
                 data: {vinculos},
-                
+                meta:{status:200,
+                    total: consultaProductos.length}
             }));
            
             res.send({response});
