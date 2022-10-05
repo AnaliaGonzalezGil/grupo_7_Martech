@@ -86,7 +86,7 @@ update: function (req,res) {
           id_marca : req.body.id_marca,
           id_color : req.body.id_color,
           id_os : req.body.id_os,
-          imgIndex : !!req.file ? req.file.filename : true,
+          imgIndex : !!req.file.filename ? req.file.filename : true,
           nombreProducto : req.body.nombreProducto,
           precioVenta : req.body.precioVenta,
           estadoEquipo : req.body.estadoEquipo,

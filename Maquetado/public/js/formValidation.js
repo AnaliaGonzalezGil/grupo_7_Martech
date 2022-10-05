@@ -19,7 +19,7 @@
                 visor.onload = function(e) 
                 {
                     document.getElementById('visorArchivo').innerHTML = 
-                    '<embed src="'+e.target.result+'" width="500" height="375" />';
+                    '<embed src="'+e.target.result+'" width="150vw"" />';
                 };
                 visor.readAsDataURL(archivoInput.files[0]);
             }
