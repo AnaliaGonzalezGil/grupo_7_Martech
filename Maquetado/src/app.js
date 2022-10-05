@@ -17,6 +17,7 @@ const { parse } = require("path");
 const userlogged = require("./middlewares/userLoggedMiddleware");
 const apiUsersRoutes = require("./routes/api/usersApiRouter");
 const apiProductsRoutes = require("./routes/api/productsApiRouter");
+const apiMarcaRoutes = require("./routes/api/marcaApiRouter")
 
 const cors = require("cors");
 
@@ -41,7 +42,7 @@ app.use("/", mainRouter);
 app.use("/products", products);
 app.use("/", users);
 
-app.use("/api", apiUsersRoutes,apiProductsRoutes)
+app.use("/api", apiUsersRoutes,apiProductsRoutes,apiMarcaRoutes)
 
 
 

@@ -7,11 +7,24 @@ const colores= db.color;
 
 
 const productsController = {
-    
+    total: (req, res)=>{
+
+        try{   
+        db.Product.findAll()
+                .then(products => {
+            res.status(200).json({meta:{status:200,
+                                        total: products.length,
+    }})
+                            
+})}
+catch (error) {
+    console.log(error);
+    res.send(error)
+}},
     todos: async (req,res) => {
 
         try {
-
+            const consultaTotalMarcas = await marca.findAll({raw: true, nest: true});
             const consultaMarcas = await marca.findAll({include: 'products',raw: true, nest: true});
             const consultaProductos = await productos.findAll({include: "marca", raw: true, nest: true});
             const consultaVinculos = await productos.findAll({raw: true, nest: true });
@@ -30,7 +43,7 @@ const productsController = {
                 marca: [el.marca.nombre ? el.marca.nombre : ''],
                 data: {vinculos},
                 meta:{status:200,
-                    total: consultaProductos.length}
+                    total: consultaTotalMarcas.length}
             }));
            
             res.send({response});

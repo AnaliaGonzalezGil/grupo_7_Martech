@@ -43,5 +43,6 @@ const upload = multer({ storage });
 
 router.get("/products", productsController.todos);
 router.get("/products/detalle/:id", productsController.detalle);
+router.get("/products/total", productsController.total);
 
 module.exports = router;

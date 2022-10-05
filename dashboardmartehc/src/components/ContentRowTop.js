@@ -7,13 +7,34 @@ import imagenFondo from '../assets/images/stormtrooper.jpg' // CORREGIR IMG
 
 function ContentRowTop(){
 	const urlUsers = "http://localhost:3000/api/users"
+	const urlProducts = "http://localhost:3000/api/products/total"
+	const urlMarcas = "http://localhost:3000/api/marcas"
 	const [users,setUsers] = useState([])
 	useEffect(() => {
 		fetch(urlUsers)
 		  .then((res) => res.json())
 		  .then((meta)=>  (setUsers(meta.meta.total)));
+		  },[])
+	const [marcas,setMarcas] = useState([])
+		useEffect(() => {
+		fetch(urlMarcas)
+		  .then((res) => res.json())
+		  .then((meta)=>  (setMarcas(meta.meta.total)));
+		  },[])
+	const [marcas2,setMarcas2] = useState([])
+		useEffect(() => {
+		fetch(urlMarcas)
+		  .then((res) => res.json())
+		  .then((meta)=>  (setMarcas2(meta.data.nombre)));
+		  },[])
+	const [productos,setProducts] = useState([])
+		useEffect(() => {
+		fetch(urlProducts)
+		  .then((res) => res.json())
+		  .then((meta)=>  (setProducts(meta.meta.total)))
+		  
 		//   setUsers(response.meta.todosUsers)
-	})
+	},[])
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -32,7 +53,7 @@ function ContentRowTop(){
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
 											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Productos totales</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800" id="registrado">TBD</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
+											<div className="h5 mb-0 font-weight-bold text-gray-800" >{productos}</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-film fa-2x text-gray-300"></i>
@@ -49,7 +70,7 @@ function ContentRowTop(){
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
 											<div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Marcas</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">79</div> {/*<!-- acá se completa con un find by pk o similar -->*/}
+											<div className="h5 mb-0 font-weight-bold text-gray-800">{marcas}</div> {/*<!-- acá se completa con un find by pk o similar -->*/}
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-award fa-2x text-gray-300"></i>
@@ -110,73 +131,53 @@ function ContentRowTop(){
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Acción
+												{marcas2[0]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Animación
+												{marcas2[1]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Aventura
+												{marcas2[2]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Ciencia Ficción
+												{marcas2[3]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Comedia
+												{marcas2[4]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Documental
+												{marcas2[5]}
 												</div>
 											</div>
 										</div>
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Drama
+												{marcas2[6]}
 												</div>
 											</div>
 										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Fantasia
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Infantiles
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-dark text-white shadow">
-												<div className="card-body">
-													Musical
-												</div>
-											</div>
-										</div>
+
 
 									</div>
 								</div>
