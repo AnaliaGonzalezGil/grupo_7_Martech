@@ -12,7 +12,7 @@ module.exports = {
     "password": null,
     "database": "martech_db2",
     "host": "127.0.0.1",
-    "dialect": "3306",
+    "dialect": "mysql",
     "port": "3306"
   },
   "production": {

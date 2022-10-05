@@ -10,8 +10,9 @@ const productsController = {
 
         try {
 
-            const consultaMarcas = await marca.findAll({include: 'products'});
-            const consultaProductos = await productos.findAll({include: 'Marca'});
+            const consultaMarcas = await marca.findAll({include: 'products',raw: true, nest: true});
+            const consultaProductos = await productos.findAll({include: "marca", raw: true, nest: true});
+            const consultaVinculos = await productos.findAll({raw: true, nest: true });
                 
             const countByCategory = {};
 
@@ -19,27 +20,24 @@ const productsController = {
                 countByCategory[element.nombre] = element.products.length
             });
 
-            res.send({
-                countByCategory,
-                products: consultaProductos
-            })
+            const vinculos = consultaVinculos.map(function(products){
+                return products.id  + "," + products.nombreProducto + ","+ products.descripcion + "," +  '/api/products/detalle/' + products.id
+                                                                })
+            const response = consultaProductos.map( el => ({
+                ...el,
+                marca: [el.marca.nombre ? el.marca.nombre : ''],
+                data: {vinculos}
+            }));
+           
+            
+            res.send({response});
+                
             
         } catch (error) {
             console.log(error);
             res.send(error)
         }
-        // db.Product.findAll()
-        //         .then(products => {
-                    // return res.status(200).json({meta:{status:200,
-                    //                     count: products.length,
-                    //                     url:'/api/products'},
-
-                    //                 data: {products: products.map(function(products){
-                    //                 return products.id  + "," + products.nombreProducto + ","+ products.descripcion + "," +  '/api/products/detalle/' + products.id
-                    //                                                                 })
-                    //                     }}
-                    //                             )
-        // })
+      
     },
     detalle:(req, res)=>{
         db.Product.findByPk(req.params.id, 

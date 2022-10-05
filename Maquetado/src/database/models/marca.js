@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     let alias = "Marca";
     let cols = {
         id: {
-            type: DataTypes.SMALLINT(6).UNSIGNED,
+            type: DataTypes.SMALLINT(100),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -19,13 +19,16 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: 'updated_At',
         deletedAt: false
     }
-const Marca = sequelize.define(alias,cols,config);
+    const Marca = sequelize.define(alias,cols,config);
 
-Marca.associate = function (models) {
-            Marca.hasMany(models.Product, { 
-                as: "products",
-                foreignKey: "id_marca"
-                })}
-                return Marca
+    Marca.associate = function (models) {
+        Marca.hasMany(models.Product, { 
+            as: "products",
+            foreignKey: "id_marca"
+            })
+    }
 
-        }
+
+    return Marca;
+
+}
