@@ -446,11 +446,16 @@ div.centrar-buttons {
 }
 article div.centrar-producto{
   display: flex;
+  margin-top: 20px;
 }
 article div.breakpoint{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+p.descripcion1{
+  display:flex;
+  justify-content: center;
 }
 
 

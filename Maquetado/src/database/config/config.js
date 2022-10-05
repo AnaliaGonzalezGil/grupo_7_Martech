@@ -13,7 +13,7 @@ module.exports = {
     "database": "martech_db2",
     "host": "127.0.0.1",
     "dialect": "3306",
-    "port": "8888"
+    "port": "3306"
   },
   "production": {
     "username": "root",
