@@ -6,8 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.SMALLINT(6),
             autoIncrement: true,
             primaryKey: true,
-            allowNull: true,
-            
+            allowNull: true,  
         },
         id_marca: {
             type: DataTypes.SMALLINT(100),
@@ -86,21 +85,19 @@ let config = {
 
 
     
-const Product = sequelize.define(alias,cols,config)
+const Product = sequelize.define(alias,cols,config);
 
 Product.associate = function (models) {
     Product.belongsTo(models.Marca, { 
         as: "marca",
         foreignKey: "id_marca"
-    })}
+    });
 
-Product.associate = function (models) {
     Product.belongsTo(models.Color, { 
         as: "color_producto",
         foreignKey: "id_color"
-        })}
-    
-Product.associate = function (models) {
+    });
+
     Product.belongsTo(models.Os, { 
         as: "opsys",
         foreignKey: "id_os"
