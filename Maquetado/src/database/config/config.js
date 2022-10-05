@@ -2,25 +2,25 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "martech_db2",
+    "database": "martech_db3",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "8888"
+    "port": "3306"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "martech_db2",
+    "database": "martech_db3",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "8888"
+    "port": "3306"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "martech_db2",
+    "database": "martech_db3",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "8888"
+    "port": "3306"
   }
 }
