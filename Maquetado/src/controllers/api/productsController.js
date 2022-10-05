@@ -5,7 +5,9 @@ const marca = db.Marca;
 const colores= db.color;
 // const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
+
 const productsController = {
+    
     todos: async (req,res) => {
 
         try {
@@ -26,10 +28,10 @@ const productsController = {
             const response = consultaProductos.map( el => ({
                 ...el,
                 marca: [el.marca.nombre ? el.marca.nombre : ''],
-                data: {vinculos}
+                data: {vinculos},
+                
             }));
            
-            
             res.send({response});
                 
             
