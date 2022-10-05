@@ -13,7 +13,7 @@
 	 <div class="modelos-premium">
 		
 		
-			<h3>Todos los productos</h3>
+			<h3>Todos los Usuarios</h3>
 		
 			<% for (let i=0; i< users.length; i++) { %>
 			<article>
@@ -22,15 +22,11 @@
 							 
 				</a>
 								<h2> <%= users[i].firstName %></h2>
-								<span><%= users[i].contrasenia %></span>
-									<p><%= users[i].password %></p>
+								<img src="../../../../images/users/<%= users[i].imagenPerfil %>" width="200" height="200" alt="imagen de perfil">
+									<p><%= users[i].email %></p>
 							</div>	
 							</article>
 						
-						
-			
-
-		
 		    <% } %>
 		</div>
 	

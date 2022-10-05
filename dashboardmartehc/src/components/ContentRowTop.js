@@ -32,7 +32,7 @@ function ContentRowTop(){
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
 											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Productos totales</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800" id="registrado">{users}</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
+											<div className="h5 mb-0 font-weight-bold text-gray-800" id="registrado">TBD</div>  {/*<!-- acá se completa con un find by pk o similar -->*/}
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-film fa-2x text-gray-300"></i>
@@ -67,7 +67,7 @@ function ContentRowTop(){
 										<div className="col mr-2">
 											<div className="text-xs font-weight-bold text-warning text-uppercase mb-1"> Usuarios registrados
 											</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">49</div> {/*<!-- acá se completa con un find by pk o similar -->*/}
+											<div className="h5 mb-0 font-weight-bold text-gray-800">{users}</div> {/*<!-- acá se completa con un find by pk o similar -->*/}
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-user fa-2x text-gray-300"></i>

@@ -10,7 +10,7 @@ function recuerdameMiddleware (req, res, next){
     users = JSON.parse(usersJSON);
     }
     let usuarioALoguearse;
-    for (let i =0; i< users.length; i++){
+    for (let i =0; i < users.length; i++){
       if (users[i].email == req.cookies.recordame) {
            usuarioALoguearse = users[i];
              break;
