@@ -26,7 +26,9 @@ const productsController = {
             const response = consultaProductos.map( el => ({
                 ...el,
                 marca: [el.marca.nombre ? el.marca.nombre : ''],
-                data: {vinculos}
+                data: {vinculos},
+                meta:{status:200,
+                    total: consultaProductos.length}
             }));
            
             
